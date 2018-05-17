@@ -6,9 +6,12 @@
  */
 package cityofaaron;
 
+import model.Player;
+import model.TeamMember;
+
 /**
  *
- * @author Joshua
+ * @authors Carissa Cunningham, Kyli Barnes, Kate Lewis
  */
 public class CityOfAaron {
 
@@ -17,6 +20,16 @@ public class CityOfAaron {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
+        Player thePlayer = new Player();
+        
+        thePlayer.setName("Joe");
+        String thePlayerName = thePlayer.getName();
+        
+        System.out.println("Name = " + thePlayerName);
+        
+          TeamMember.OldMan.getName();
+          TeamMember.OldMan.getTitle();
     
+    }
+      
 }
