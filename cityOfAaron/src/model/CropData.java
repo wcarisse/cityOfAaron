@@ -27,8 +27,8 @@ public class CropData implements Serializable {
     private int acresPlanted;
     private int numStarved;
     private int eatenByRats;
-    private int wheatForPeople;
-
+    private int wheatForPeople;    
+    
     //Getters and Setters for the above variables
     public int getYear() {
         return year;
@@ -140,5 +140,9 @@ public class CropData implements Serializable {
     }
     public void setWheatForPeople(int wheatForPeople) {
         this.wheatForPeople = wheatForPeople;
+    }
+    
+    //Constructor
+    public CropData() {
     }
 }
