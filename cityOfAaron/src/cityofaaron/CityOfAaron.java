@@ -10,6 +10,7 @@ import model.CropData;
 import model.ListItem;
 import model.Player;
 import model.TeamMember;
+import model.Location;
 
 /**
  *
@@ -50,6 +51,19 @@ public class CityOfAaron {
         itemOneName = itemOne.getName();
         
         System.out.println("Name = " + itemOneName);
+        
+        Location theLocation = new Location();
+        
+        theLocation.setDescription("description");
+        String theLocationDescription = theLocation.getDescription();
+        
+        System.out.println("Description = " + theLocationDescription);
+        
+        theLocation.setSymbol("symbol");
+        String theLocationSymbol= theLocation.getSymbol();
+        
+        System.out.println("Symbol = " + theLocationSymbol);
+        
     }
       
 }
