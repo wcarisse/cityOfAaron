@@ -7,6 +7,7 @@
 package cityofaaron;
 
 import model.CropData;
+import model.ListItem;
 import model.Player;
 import model.TeamMember;
 
@@ -39,7 +40,16 @@ public class CityOfAaron {
         int testDataYear = testData.getYear();
         
         System.out.println("Year = " + testDataYear);
-    
+        
+        //ListItem Class Test
+        ListItem itemOne;
+        itemOne = new ListItem ();
+        
+        itemOne.setName("tool");
+        String itemOneName;
+        itemOneName = itemOne.getName();
+        
+        System.out.println("Name = " + itemOneName);
     }
       
 }
