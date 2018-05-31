@@ -59,6 +59,34 @@ public class CropControl {
         //return acresOwned
         return acresOwned;
         
-}
+    }
+    /*
+    * The plantCrops Method
+    * Purpose: to plant crops
+    * @param acres to plant
+    * @param required wheat
+    * @param a reference to wheatInStore from the CropData object
+    * @return the amount of wheat left in storage after planting
+    * Pre-conditions: acres to plant must be >= 0
+    * and wheat required must be <= wheatInStore
+    * @author Carissa Cunningham
+    */
 
+    public static int plantCrops ( int acresToPlant, int requiredWheat, CropData cropData)
+    {
+        //If acresToPlant is < 0, return -1
+        if (acresToPlant < 0)
+            return -1;
+        //requiredWheat = acresToPlant divided by 2
+        requiredWheat = acresToPlant / 2;
+        //If requiredWheat is > wheatInStore, return -1
+        int wheatInStore = cropData.getWheatInStore();
+        if (requiredWheat > wheatInStore)
+            return -1;
+        //wheatInStore –= requiredWheat
+        wheatInStore -= requiredWheat;
+        cropData.setWheatInStore(wheatInStore);
+        //return wheatInStore
+        return wheatInStore;
+    }
 }
