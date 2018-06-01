@@ -47,5 +47,49 @@ public class CropControlTest {
         // TODO review the generated test code and remove the default call to fail.
       
     }
-    
+
+    /**
+     * Test of calcLandPrice method, of class CropControl.
+     */
+    @Test
+    public void testCalcLandPrice() {
+        System.out.println("calcLandPrice");
+        int expResult = 0;
+        int result = CropControl.calcLandPrice();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of plantCrops method, of class CropControl.
+     */
+    @Test
+    public void testPlantCrops() {
+        System.out.println("plantCrops");
+        int acresToPlant = 0;
+        int requiredWheat = 0;
+        CropData cropData = null;
+        int expResult = 0;
+        int result = CropControl.plantCrops(acresToPlant, requiredWheat, cropData);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of feedPeople method, of class CropControl.
+     */
+    @Test
+    public void testFeedPeople() {
+        System.out.println("feedPeople");
+        CropData theCrops = new CropData();
+        theCrops.setWheatInStore(100);
+        int numberOfBushels = 10;
+        int expResult;
+        expResult = 90;
+        int result;
+        result = CropControl.feedPeople(numberOfBushels, theCrops);
+        assertEquals(expResult, result);
+    }  
 }
