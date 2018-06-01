@@ -115,7 +115,31 @@ public class CropControl {
                 return wheatInStore;
 
 }
-    
+        /*
+	*The setOffering method
+	*Purpose: to pay tithes and offerings
+	*@param the percentage of wheat to pay
+	*@return void
+	*Pre-conditions: user input must be positive and <= 100
+	*/
+        //Author Kate Lewis
+
+        public static double setOffering(double n, CropData cropData) {
+            //If n < 0 , return -1
+            if (n < 0)
+                return -1;
+            //If n > 100, return -1
+            if (n > 100) 
+                return -1;
+            //setOffering = wheatInStore * n
+            double wheatInStore = cropData.getWheatInStore();
+            double setOffering = wheatInStore * n;
+            //return setOffering
+            return setOffering;
+
+            
+	}
+
 
     
 }

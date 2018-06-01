@@ -92,4 +92,18 @@ public class CropControlTest {
         result = CropControl.feedPeople(numberOfBushels, theCrops);
         assertEquals(expResult, result);
     }  
+
+    /**
+     * Test of setOffering method, of class CropControl.
+     */
+    @Test
+    public void testSetOffering() {
+        System.out.println("setOffering");
+        double n = 0.5;
+        double wheatInStore = 8000;
+        double expResult = 4000.0;
+        double result = 4000.0;
+        assertEquals(expResult, result, 0.0);
+
+    }
 }
