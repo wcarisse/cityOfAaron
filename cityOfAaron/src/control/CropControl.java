@@ -89,4 +89,33 @@ public class CropControl {
         //return wheatInStore
         return wheatInStore;
     }
+        //author: Kyli Barnes
+        //date modified: 6/1/18
+        /*
+        *The feedThePeople method
+        *Purpose: to feed the people
+        *@param number of bushels
+        *@param a reference to wheatInStore (from CropData class)
+        *@return how much wheat is left in storage 
+        *Pre-conditions: bushels set aside to feed people must be positive 
+        *and the amount of wheat in store must be >= the number of bushels that are to be set aside.
+        */
+        public static int feedPeople (int numberOfBushels, CropData cropData){
+            //If numberOfBushels is <0, return -1
+            if (numberOfBushels < 0)
+                return -1;
+            //If numberofBushels is > wheatInStore, return -1
+            int wheatInStore = cropData.getWheatInStore();
+            if (numberOfBushels > wheatInStore)
+                return -1;
+            //Wheat = wheatInStore – numberOfBushels
+            wheatInStore -= numberOfBushels;
+            cropData.setWheatInStore(wheatInStore);
+            //Return wheatInStore 
+                return wheatInStore;
+
+}
+    
+
+    
 }
