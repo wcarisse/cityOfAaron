@@ -11,17 +11,28 @@ import model.ListItem;
 import model.Player;
 import model.TeamMember;
 import model.Location;
-
+import view.*;
+import model.Game;
 /**
  *
  * @authors Carissa Cunningham, Kyli Barnes, Kate Lewis
  */
 public class CityOfAaron {
+      // variable for keeping a reference to the Game object
+        private static final Game theGame = null;
 
     /**
      * @param args the command line arguments
      */
+    
+    // main function - entry point for the program
+    // runs the main menu
     public static void main(String[] args) {
+      
+        
+        MainMenuView mmv = new MainMenuView();
+        mmv.displayMenuView();
+
         // TODO code application logic here
         //Player Class Test
         Player thePlayer = new Player();
@@ -64,6 +75,11 @@ public class CityOfAaron {
         
         System.out.println("Symbol = " + theLocationSymbol);
         
+        
+    }
+
+    public static void setTheGame(Game theGame) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
       
 }
