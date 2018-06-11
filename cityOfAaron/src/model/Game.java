@@ -21,5 +21,27 @@ public class Game implements Serializable {
         this.thePlayer = thePlayer;
     }
     
+    private CropData cropData = null;
     
+    /**
+    * the getCrops() method
+    * Purpose: get a reference to the crop object
+    * Parameters: none
+    * Returns: a reference to a crop object
+    */
+    public CropData getCrop()
+    {
+        return cropData;
+    }
+    
+    /**
+    * the setCrops() method
+    * Purpose: store a reference to a crop object
+    * Parameters: a reference to a crop object
+    * Returns: none
+    */
+    public void setCrop(Cropdata cropRef)
+    {
+        cropData = cropRef;
+    }
 }
