@@ -19,14 +19,8 @@ public class CropView {
     private static Scanner keyboard = new Scanner(System.in);
     // Get references to the Game object and the CropData object
     private static Game theGame = CityOfAaron.getTheGame();
-    private static CropData cropData = theGame.getCropData();
+    private static CropData cropData = theGame.getCrop();
     
-    /**
-* The buyLandView method
-* Purpose: interface with the user input for buying land
-* Parameters: none
-* Returns: none
-*/
 /**
 * The buyLandView method
 * Purpose: interface with the user input for buying land
