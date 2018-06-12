@@ -151,7 +151,7 @@ public void startNewGame()
  // Save a reference to the player object in the Game object
  theGame.setThePlayer(thePlayer);
  // Display a welcome message
- System.out.println("Welcome “ + name + “ have fun.");
+ System.out.println("Welcome “ + name + ',' + “ have fun.");
  // Display the Game menu
  // Create a CropData object,
  CropData cropData = new CropData();
@@ -174,16 +174,16 @@ theGame.setCrop(cropData);
 
 public void startSavedGame()
 {
-    System.out.println("Saved Game Menu.");
+    System.out.println("Resume Saved Game");
 }
  
 public void displayHelpMenuView()
 {
-    System.out.println("Help Menu.");
+    System.out.println("Help");
 }
 
 public void displaySaveGameView()
 {
-    System.out.println("Display saved game view.");
+    System.out.println("Display saved game");
 }
  }
