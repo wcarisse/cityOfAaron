@@ -76,4 +76,34 @@ public class CropView {
         // Call the plantCrops() method in the CropControl layer to buy the land
         CropControl.plantCrops (toPlant, wheatInStore, acresOwned, cropData);
     }
+    
+    public static void displayCropReportView()
+    {
+        int option = 0;
+        switch (option)
+        {
+        case 1: // display wehat in store
+        wheatInStore();
+        break;
+        case 2: // display population
+        population();
+        break;
+        case 3: // display acres owned
+        acresOwned();
+        case 5:
+        System.out.println("Return to Game Menu");
+    }
+    }
+
+    private static void wheatInStore() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static void population() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static void acresOwned() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
