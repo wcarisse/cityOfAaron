@@ -40,7 +40,7 @@ public class Game implements Serializable {
     * Parameters: a reference to a crop object
     * Returns: none
     */
-    public void setCrop(Cropdata cropRef)
+    public void setCrop(CropData cropRef)
     {
         cropData = cropRef;
     }
