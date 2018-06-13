@@ -143,6 +143,28 @@ public class CropControl {
     public static void plantCrops(int toPlant, int wheatInStore, int acresOwned, CropData cropData) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    //@author Carissa Cunningham
+    //date modified: 6/12/18
+    /*
+    * The payOffering Method
+    * Purpose: pay tithes and offerings
+    * @param user input
+    * @return user input
+    * Pre-conditions: user input must be >= 0 
+    * and user input must be <= 100
+    */
+    public static double payOffering (double userInput)
+    {
+       //If userInput  is < 0, return -1
+        if (userInput < 0)
+            return -1;
+       //If userInput is > 100, return -1
+        if (userInput > 100)
+            return -1;
+       //Return userInput
+        return userInput;
+    }
 
 
     
