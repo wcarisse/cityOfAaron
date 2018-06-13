@@ -9,10 +9,11 @@ import model.*;
 import control.*;
 import java.util.Scanner;
 import cityofaaron.CityOfAaron;
+import static java.lang.Double.max;
 
 /**
  *
- * @author kate
+ * @author kate lewis
  */
 public class CropView {
     // Create a Scanner object
@@ -96,33 +97,81 @@ public class CropView {
         CropControl.plantCrops (toPlant, wheatInStore, acresOwned, cropData);
     }
     
-    public static void displayCropReportView()
-    {
-        int option = 0;
-        switch (option)
+ public void displayCropsReportView()
+ {
+        int cropsReportOption = 0;
+        int max = 0;
+        do
         {
-        case 1: // display wehat in store
-        wheatInStore();
-        break;
-        case 2: // display population
-        population();
-        break;
-        case 3: // display acres owned
-        acresOwned();
-        case 5:
-        System.out.println("Return to Game Menu");
-    }
-    }
+            // Display the menu
+            System.out.println(cropsReportOption);
+    
+            // Prompt the user and get the user’s input
+            cropsReportOption = getcropsReportOption();
 
-    private static void wheatInStore() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+            // Perform the desired action
+            doAction(cropsReportOption);
 
-    private static void population() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+            // Determine and display the next view
+        } while (cropsReportOption != max);  
+ }
+ /**
+ * The getMenuOption method
+ * Purpose: gets the user's input
+ * Parameters: none
+ * Returns: integer - the option selected
+ * @return 
+ */
+ // ===================================
+ public int cropsReportOption()
+ {
+    // declare a variable to hold user’s input
+     int userInput;
+     int max = 0;
+    // begin loop
+    do{
+        // get user input from the keyboard
+        userInput = keyboard.nextInt();
 
-    private static void acresOwned() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        // if it is not a valid value, output an error message
+        if (userInput < 1 || userInput > max)
+            {
+                System.out.println("Option must be between 1 and " + max);
+            }
+        // loop back to the top if input was not valid
+    } while(userInput < 1 || userInput > max);
+    
+    // return the value input by the user
+    return userInput;
+ }
+ 
+ /**
+ *The doAction method
+ * Purpose: performs the selected action
+ * Parameters: none
+ * Returns: none
+ * @param option
+ */
+ // ===================================
+ public void doAction(int option)
+   {
+           
+         switch (option)
+        {
+            case 1: // display wheat in store
+            //Get the number of wheat in storage and acred owned
+            int wheatInStore = cropData.getWheatInStore();
+            System.out.println("You have this much wheat in the sotre" + wheatInStore);
+            break;
+            case 2: // display acres owned
+            int acresOwned = cropData.getAcresOwned();
+            System.out.println("You own this many acres" + acresOwned);
+            break;
+            case 3:
+            System.out.println("Return to main menu");
+        }
+    }
+public int getcropsReportOption() {
+      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

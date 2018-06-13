@@ -17,8 +17,8 @@ import model.CropData;
 public class MainMenuView {
     Scanner keyboard = new Scanner(System.in);
     
-    private String theMenu;
-    private int max;
+    private final String theMenu;
+    private final int max;
     
     /**
 * The MainMenuView constructor
@@ -37,9 +37,10 @@ public MainMenuView()
  " 2 - Get and start a saved game\n" +
  " 3 - Get help on playing the game\n" +
  " 4 - Save game\n" +
- " 5 - Quit\n";
+ " 5 - List Menu\n" +
+ " 6 - Quit\n";
 
- max = 5;
+ max = 6;
 }
  /**
  * The displayMenuView method
@@ -71,6 +72,7 @@ do
  * Purpose: gets the user's input
  * Parameters: none
  * Returns: integer - the option selected
+ * @return 
  */
  // ===================================
  public int getMenuOption()
@@ -100,6 +102,7 @@ do
  * Purpose: performs the selected action
  * Parameters: none
  * Returns: none
+ * @param option
  */
  // ===================================
  public void doAction(int option)
@@ -118,7 +121,10 @@ do
  case 4: // save game
  displaySaveGameView();
  break;
- case 5:
+ case 5: // list menu
+ displayListMenuView();
+ break;
+ case 6:
  System.out.println("Thanks for playing ... goodbye.");
  }
  } 
@@ -186,4 +192,9 @@ public void displaySaveGameView()
 {
     System.out.println("Display saved game");
 }
- }
+
+public void displayListMenuView() {
+       System.out.println("display list menu");
+  }
+}
+   

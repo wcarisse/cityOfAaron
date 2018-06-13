@@ -103,6 +103,7 @@ public class GameMenuView {
     * Purpose: performs the selected action
     * Parameters: none
     * Returns: none
+    * @param option
     */
     // ===================================
     public void doAction(int option)
