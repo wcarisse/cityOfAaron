@@ -149,7 +149,8 @@ public class GameMenuView {
     
     public void displayMainMenuView()
     {
-        System.out.println("back to the main menu...eventually");
+        MainMenuView mmv = new MainMenuView();
+        mmv.displayMenuView();
     }
     
 }

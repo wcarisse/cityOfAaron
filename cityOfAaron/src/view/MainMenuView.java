@@ -159,6 +159,8 @@ public void startNewGame()
  // Display a welcome message
  System.out.println("Welcome “ + name + ',' + “ have fun.");
  // Display the Game menu
+ GameMenuView gmv = new GameMenuView();
+ gmv.displayGameMenuView();
  // Create a CropData object,
  CropData cropData = new CropData();
 // initialize it
