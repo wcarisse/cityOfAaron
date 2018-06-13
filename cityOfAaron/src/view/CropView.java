@@ -42,6 +42,25 @@ public class CropView {
     }
 
     /**
+    * The payOfferingsView method
+    * Purpose: interface with the user to pay tithes
+    * Parameters: none
+    * Returns: none
+    * @author Carissa Cunningham
+    */
+    public static void payOfferingsView()
+    {
+        //Prompt User to enter percentage of offerings they wish to pay
+        System.out.print("What percentage of your wheat would you like to offer to the Lord? ");
+        //Get user's input and save it
+        double toPay;
+        toPay = keyboard.nextInt();
+        //Call the payOffering() method from the control layer
+        CropControl.payOffering(toPay);
+    }
+    
+    
+    /**
     * The runCropsView method()
     * Purpose: runs the CityOfAaron game
     * Parameters: none
