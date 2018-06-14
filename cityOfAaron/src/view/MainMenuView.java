@@ -187,6 +187,8 @@ public void startSavedGame()
  
 public void displayHelpMenuView()
 {
+    HelpMenuView hmv = new HelpMenuView();
+    hmv.displayHelpMenuView();
     System.out.println("Help");
 }
 
