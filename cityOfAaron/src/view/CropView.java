@@ -174,4 +174,16 @@ public class CropView {
 public int getcropsReportOption() {
       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    public static void feedPeopleView() {
+        // Get number of bushels from user
+        System.out.print("How many bushels would you like? ");
+        // Get number of wheat in storage
+        int wheatInStore = cropData.getWheatInStore();
+        // Get the user’s input and save it.
+        int toFeed;
+        toFeed = keyboard.nextInt();
+        // Call the feedPeople( ) method in the control layer to buy the land
+        CropControl.feedPeople(toFeed,cropData);
+    }
+
 }
