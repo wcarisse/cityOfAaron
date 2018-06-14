@@ -196,7 +196,8 @@ public void displaySaveGameView()
 }
 
 public void displayListMenuView() {
-       System.out.println("display list menu");
+       ListMenuView lmv = new ListMenuView();
+       lmv.displayListMenuView();
   }
 }
    
