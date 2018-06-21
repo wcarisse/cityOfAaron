@@ -14,7 +14,7 @@ import java.util.Scanner;
 import cityofaaron.CityOfAaron;
 import model.Game;
 
-public class HelpMenuView {
+public class HelpMenuView extends MenuView {
     
     Scanner keyboard = new Scanner(System.in);
     private String helpMenu;
@@ -154,8 +154,6 @@ public class HelpMenuView {
       
       public void displayMainMenuView() 
     {
-        MainMenuView mmv = new MainMenuView();
-        mmv.displayMenuView();
         System.out.println("You're headed back to the main menu.");
     }
 }

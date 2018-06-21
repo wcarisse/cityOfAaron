@@ -149,8 +149,7 @@ public class GameMenuView {
     
     public void displayMainMenuView()
     {
-        MainMenuView mmv = new MainMenuView();
-        mmv.displayMenuView();
+       System.out.println("Lots of stuff goes here");
     }
     
 }
