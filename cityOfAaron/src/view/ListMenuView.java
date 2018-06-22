@@ -14,17 +14,17 @@ import cityofaaron.CityOfAaron;
  *
  * @author kate lewis
  */
-public class ListMenuView {
+public class ListMenuView extends MenuView {
     
     Scanner keyboard = new Scanner(System.in);
-    
+    private Game theGame = CityOfAaron.getTheGame();
     private String theMenu;
     private int max;
     
     
     public ListMenuView()
     {
-        theMenu = "\n" +
+        super("\n"+
          "**********************************\n" +
          "* CITY OF AARON: LIST MENU *\n" +
          "**********************************\n" +
@@ -32,9 +32,8 @@ public class ListMenuView {
          " 2 - Tools\n" +
          " 3 - Provisions\n" +
          " 4 - Teams\n" +
-         " 5 - Main Menu\n";
-
-         max = 5;
+         " 5 - Main Menu\n",
+        5);
     }
     
     /**
@@ -101,7 +100,8 @@ public class ListMenuView {
     * @param option
     */
     // ===================================
-     public void doAction(int option)
+    
+    @Override public void doAction(int option)
         {
             switch (option)
                {
