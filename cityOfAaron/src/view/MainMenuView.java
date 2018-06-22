@@ -82,8 +82,11 @@ public void startNewGame()
  // Display the Banner Page.
  System.out.println("Welcome to the city of Aaron."
          + "You are destined to be the new ruler of this city."
-         + "High Priest Joe has given you this list of responsibilities: buy and sell land, figure out how much wheat to plant each year and how much to feed your people. Make sure you pay your annual wheat tithe or you will all die! "
-         + "Be careful or you and your people will starve to death. Beware of the rats, they will eat your wheat.");
+         + "High Priest Joe has given you this list of responsibilities:"
+         + "Buy and sell land, figure out how much wheat to plant each year"
+         + "and how much to feed your people. Make sure you pay your annual"
+         + "wheat tithe or you will all die! Be careful or you and your people"
+         + "will starve to death. Beware of the rats, they will eat your wheat.");
  // Create a new Player object
  Player thePlayer = new Player();
  // Prompt for and get the user’s name.
@@ -95,7 +98,7 @@ public void startNewGame()
  // Save a reference to the player object in the Game object
  theGame.setThePlayer(thePlayer);
  // Display a welcome message
- System.out.println("Welcome “ + name + ',' + “ have fun.");
+ System.out.println("Welcome " + name + ',' + " have fun!");
  // Display the Game menu
  GameMenuView gmv = new GameMenuView();
  gmv.displayGameMenuView();

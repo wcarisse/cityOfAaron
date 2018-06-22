@@ -16,7 +16,7 @@ import model.Player;
 import model.Game;
 import model.CropData;
 
-public class GameMenuView {
+public class GameMenuView extends MenuView {
     Scanner keyboard = new Scanner(System.in);
     private String gameMenu;
     private int max;
@@ -31,7 +31,7 @@ public class GameMenuView {
     // ===================================
     public GameMenuView()
     {
-        gameMenu = "\n" +
+        super("\n" +
         "**********************************\n" +
         "* CITY OF AARON: GAME MENU *\n" +
         "**********************************\n" +
@@ -39,9 +39,8 @@ public class GameMenuView {
         " 2 - View or Print a list\n" +
         " 3 - Move to a new land\n" +
         " 4 - Manage the Crops\n" +
-        " 5 - Return to the Main Menu\n";
-
-        max = 5;
+        " 5 - Return to the Main Menu\n",
+        5);
 }
 
     /**
@@ -106,6 +105,7 @@ public class GameMenuView {
     * @param option
     */
     // ===================================
+    @Override
     public void doAction(int option)
     {
         switch (option)
