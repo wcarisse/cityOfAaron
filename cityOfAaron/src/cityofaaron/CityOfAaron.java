@@ -82,11 +82,11 @@ public class CityOfAaron {
     }
 
     public static void setTheGame(Game theGame) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        theGame = getTheGame();
     }
 
     public static Game getTheGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return theGame;
     }
       
 }
