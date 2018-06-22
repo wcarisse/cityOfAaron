@@ -17,10 +17,7 @@ import model.CropData;
 public class MainMenuView extends MenuView {
     Scanner keyboard = new Scanner(System.in);
     
-    private final String theMenu;
-    private final int max;
-    
-    /**
+/**
 * The MainMenuView constructor
 * Purpose: Initialize the menu data
 * Parameters: none

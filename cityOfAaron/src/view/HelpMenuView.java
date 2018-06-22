@@ -14,7 +14,7 @@ import java.util.Scanner;
 import cityofaaron.CityOfAaron;
 import model.Game;
 
-public class HelpMenuView extends MenuView {
+public class HelpMenuView{
     
     Scanner keyboard = new Scanner(System.in);
     private String helpMenu;
@@ -41,7 +41,7 @@ public class HelpMenuView extends MenuView {
         " 5 - How do I display a list of animals, provisions and tools in the city storehouse?\n" +
         " 6 - Back to the Main Menu.\n";
 
-        max = 5;
+        max = 6;
 }
 /**
     * The displayGameMenuView method

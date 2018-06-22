@@ -3,7 +3,7 @@
  * Author: Carissa, Kate and Kyli  
  * Date last modified: June 2018  
  */ 
-package View; 
+package view; 
  
 import java.util.Scanner; 
  

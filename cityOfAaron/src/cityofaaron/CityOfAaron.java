@@ -31,7 +31,7 @@ public class CityOfAaron {
       
         
         MainMenuView mmv = new MainMenuView();
-        mmv.displayMenuView();
+        mmv.displayMenu();
         
         ListMenuView lmv = new ListMenuView();
         lmv.displayListMenuView();
