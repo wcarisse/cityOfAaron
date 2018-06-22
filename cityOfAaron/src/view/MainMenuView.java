@@ -62,10 +62,7 @@ public MainMenuView()
  case 4: // save game
  displaySaveGameView();
  break;
- case 5: // list menu
- displayListMenuView();
- break;
- case 6:
+ case 5:
  System.out.println("Thanks for playing ... goodbye.");
  }
  } 
@@ -138,9 +135,5 @@ public void displaySaveGameView()
     System.out.println("Display saved game");
 }
 
-public void displayListMenuView() {
-       ListMenuView lmv = new ListMenuView();
-       lmv.displayListMenuView();
-  }
 }
    
