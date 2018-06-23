@@ -154,6 +154,7 @@ public class HelpMenuView{
       
       public void displayMainMenuView() 
     {
-        System.out.println("You're headed back to the main menu.");
+        ListMenuView lmv = new ListMenuView();
+        lmv.displayMenu();
     }
 }

@@ -81,12 +81,13 @@ public class GameMenuView extends MenuView {
 
     public void displayListMenuView()
     {
-        System.out.println("here is the list menu");
+        ListMenuView lmv = new ListMenuView();
+        lmv.displayMenu();
     }
     
     public void moveToNewLocation()
     {
-        System.out.println("CHoose coordinates for your new adventure!");
+        System.out.println("Choose coordinates for your new adventure!");
     }
     
     public void manageCrops()
