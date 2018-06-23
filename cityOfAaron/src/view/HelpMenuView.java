@@ -14,7 +14,7 @@ import java.util.Scanner;
 import cityofaaron.CityOfAaron;
 import model.Game;
 
-public class HelpMenuView{
+public class HelpMenuView extends MenuView{
     
     Scanner keyboard = new Scanner(System.in);
     private String helpMenu;
@@ -30,7 +30,7 @@ public class HelpMenuView{
     // ===================================
     public HelpMenuView() {
 
-        helpMenu = "\n" +
+        super("\n" +
         "**********************************\n" +
         "* CITY OF AARON: HELP MENU *\n" +
         "**********************************\n" +
@@ -39,9 +39,8 @@ public class HelpMenuView{
         " 3 - How do I view the map?\n" +
         " 4 - How do I move to another location?\n" +
         " 5 - How do I display a list of animals, provisions and tools in the city storehouse?\n" +
-        " 6 - Back to the Main Menu.\n";
-
-        max = 6;
+        " 6 - Back to the Main Menu.\n",
+        6);
 }
 /**
     * The displayGameMenuView method
@@ -76,6 +75,7 @@ public class HelpMenuView{
      * @return 
     */
     // ===================================
+    @Override
     public int getMenuOption()
     {
     // declare a variable to hold user’s input
@@ -105,6 +105,7 @@ public class HelpMenuView{
      * @param option
     */
     // ===================================
+    @Override
     public void doAction(int option)
     {
         switch (option)
@@ -149,12 +150,13 @@ public class HelpMenuView{
       
       public void displayListMenuView()
     {
+        ListMenuView lmv = new ListMenuView();
+        lmv.displayMenu();
         System.out.println("Take a look at your list!");
     }
       
       public void displayMainMenuView() 
     {
-        ListMenuView lmv = new ListMenuView();
-        lmv.displayMenu();
+       
     }
 }
