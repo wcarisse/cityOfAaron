@@ -77,11 +77,11 @@ public class HelpMenuView extends MenuView{
     } 
 
     private void viewGoals() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Here are the goals: ");
     }
     
      private void Location() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Where is the city of Aaron?");
     }
      
      public void viewMap()
