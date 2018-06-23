@@ -32,9 +32,6 @@ public class CityOfAaron {
         
         MainMenuView mmv = new MainMenuView();
         mmv.displayMenu();
-        
-        ListMenuView lmv = new ListMenuView();
-        lmv.displayListMenuView();
 
         // TODO code application logic here
         //Player Class Test
