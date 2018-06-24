@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Joshua
+ * @author Carissa
  */
 public class CropControlTest {
     
@@ -101,8 +101,8 @@ public class CropControlTest {
         System.out.println("setOffering");
         double n = 0.5;
         double wheatInStore = 8000;
-        double expResult = 4000.0;
-        double result = 4000.0;
+        double expResult = 4000;
+        double result = 4000;
         assertEquals(expResult, result, 0.0);
 
     }
