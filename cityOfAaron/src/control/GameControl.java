@@ -49,9 +49,9 @@ theGame.setCrop(theCrops);
 // create the list of animals
 // create the list of tools
 //create the list of provisions
-// create the Locations and the Map object
    
    
+// create the Locations and the Map object     
 /**
 * The createMap method
 * Purpose: creates the location objects and the map
@@ -193,7 +193,7 @@ theMap.setLocation(3, 1, loc);
 String lake = "You arrive at the edge of the great Lake Bob. This lake \n" +
               "is, unfotunately, all salt water, and is of no use to \n" +
               "the City of Aaron except as a nice place to cool off during \n" +
-              "the hot months of summer";
+              "the hot months of summer.";
 loc = new Location();
 loc.setDescription(lake);
 loc.setSymbol("ooo");
@@ -203,19 +203,20 @@ theGame.setMap(theMap);
 }
 
 public static void displayMap(){
-   String[][] theMap = { {"zero", "!!1", "!!1", "~~~", "four"},
-                          {"zero", "one", "two", "~~~", "four"},
-                          {"zero", "one", "!!3", "~~~", "four"},
-                          {"zero", "one", "two", "~~~", "four"},
-                          {"zero", "one", "two", "~~~", "four"}
-    }; 
+    Game theGame = CityOfAaron.getTheGame();
     
+    
+   String[][] theMap = { {"^^^", "!!2", "!!1", "~~~", ",,,"},
+                         {"^^^", "$$$", "(*)", "~~~", ",,,"},
+                         {"^^^", "<^>", "!!3", "~~~", ",,,"},
+                         {"^^^", "@@@", "ooo", "~~~", ",,,"},
+                         {"xxx", "xxx", "xxx", "~~~", ",,,"}
+    }; 
+      
     for (int i = 0; i < theMap.length; i++){
-        
         for (int j = 0; j < theMap[i].length; j++){
             System.out.println(theMap[i][j]);
         }
-        
     }   
 }
 
