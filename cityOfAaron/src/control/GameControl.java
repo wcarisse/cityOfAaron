@@ -29,27 +29,30 @@ public static void createNewGame(String name)
 }
    public static void createCropDataObject()
 {
-CropData theCrops = new CropData();
-theCrops.setYear(0);
-theCrops.setPopulation(100);
-theCrops.setNewPeople(5);
-theCrops.setCropYield(3);
-theCrops.setNumberWhoDied(0);
-theCrops.setOffering(10);
-theCrops.setWheatInStore(2700);
-theCrops.setAcresOwned(1000);
-theCrops.setAcresPlanted(1000);
-theCrops.setHarvest(3000);
-theCrops.setOfferingBushels(300);
-theCrops.setAcresPlanted(1000);
+    CropData theCrops = new CropData();
+    theCrops.setYear(0);
+    theCrops.setPopulation(100);
+    theCrops.setNewPeople(5);
+    theCrops.setCropYield(3);
+    theCrops.setNumberWhoDied(0);
+    theCrops.setOffering(10);
+    theCrops.setWheatInStore(2700);
+    theCrops.setAcresOwned(1000);
+    theCrops.setAcresPlanted(1000);
+    theCrops.setHarvest(3000);
+    theCrops.setOfferingBushels(300);
+    theCrops.setAcresPlanted(1000);
 // Save the cropData in the Game object
 theGame.setCrop(theCrops);
 }
+   
 // create the list of animals
 // create the list of tools
 //create the list of provisions
 // create the Locations and the Map object
-    /**
+   
+   
+/**
 * The createMap method
 * Purpose: creates the location objects and the map
 * Parameters: none
@@ -59,9 +62,9 @@ public static void createMap()
 {
     // create the Map object,
 // refer to the Map constructor
-Map theMap = new Map();
- // create a string that will go in the Location objects
-// that contain the river
+Map theMap = new Map(MAX_ROW, MAX_COL);
+ 
+// create a string that will go in the Location objects that contain the river
 String river = "You are on the River. The river is the source\n" +
 "of life for our city. The river marks the eastern\n " +
 "boundary of the city - it is wilderness to the East.\n";
@@ -72,9 +75,10 @@ loc.setDescription(river);
 loc.setSymbol("~~~");
 // set this location object in each cell of the array in column 4
 for(int i = 0; i < MAX_ROW; i++)
-{
-theMap.setLocation(i, 4, loc);
-}
+    {
+    theMap.setLocation(i, 4, loc);
+    }
+
 // define the string for a farm land location
 String farmland = "You are on the fertile banks of the River.\n" +
 "In the spring, this low farmland floods and is covered with rich\n" +
@@ -83,16 +87,31 @@ String farmland = "You are on the fertile banks of the River.\n" +
 loc = new Location();
 loc.setDescription(farmland + "\n One bushel will plant two acres of wheat.");
 loc.setSymbol("!!!");
-theMap.setLocation(0, 2, loc);   
+theMap.setLocation(0, 2, loc); 
+
+//NEW LOCATION
+
+//NEW lOCATION
+
+//NEW LOCATION
+
+//NEW LOCATION
+
+//NEW LOCATION
+
+//NEW LOCATION
+
+
 theGame.setMap(theMap);
 }
+
 public static void displayMap(){
-    String[][] theMap = { {"one", "two", "three", "~~~", "five"},
-                          {"one", "two", "three", "~~~", "five"},
-                          {"one", "two", "three", "~~~", "five"},
-                          {"one", "two", "three", "~~~", "five"},
-                          {"one", "two", "three", "~~~", "five"}
-    };
+   String[][] theMap = { {"zero", "one", "!!!", "~~~", "four"},
+                          {"zero", "one", "two", "~~~", "four"},
+                          {"zero", "one", "two", "~~~", "four"},
+                          {"zero", "one", "two", "~~~", "four"},
+                          {"zero", "one", "two", "~~~", "four"}
+    }; 
     
     for (int i = 0; i < theMap.length; i++){
         
@@ -100,11 +119,8 @@ public static void displayMap(){
             System.out.println(theMap[i][j]);
         }
         
-    }
-    }
-    }
-    //theMap = new String [5][5];
-    //int[][] matrix = {
-    //{1, 2, 3},
-    //{4, 5, 6},
-    //{7, 8, 9} };
+    }   
+}
+
+ 
+}

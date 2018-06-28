@@ -15,7 +15,6 @@ import cityofaaron.CityOfAaron;
 import model.Player;
 import model.Game;
 import model.CropData;
-import view.MenuView;
 
 public class GameMenuView extends MenuView {
     Scanner keyboard = new Scanner(System.in);
@@ -76,7 +75,7 @@ public class GameMenuView extends MenuView {
     
     public void viewMap()
     {
-        System.out.println("Here is the Map");
+        System.out.println("View Map");
     }
 
     public void displayListMenuView()

@@ -83,8 +83,8 @@ public void startNewGame()
  // Display the Banner Page.
  System.out.println(
           "********************************************************\n" +
-           "* Welcome to the city of Aaron.*\n" +
-           "* You are destined to be the new ruler of this city.*\n" +
+          "* Welcome to the city of Aaron.*\n" +
+          "* You are destined to be the new ruler of this city.*\n" +
           "* High Priest Joe has given you this list of responsibilities:*\n" +
           "* Buy and sell land, figure out how much wheat to plant each year *\n"+
           "* and how much to feed your people. Make sure you pay your annual*\n" +
