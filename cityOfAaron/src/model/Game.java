@@ -44,4 +44,8 @@ public class Game implements Serializable {
     {
         cropData = cropRef;
     }
+
+    public void setMap(Map theMap) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -7,6 +7,7 @@ package view;
 
 import java.util.Scanner;
 import cityofaaron.CityOfAaron;
+import control.GameControl;
 import model.Player;
 import model.Game;
 import model.CropData;
@@ -80,13 +81,16 @@ public void startNewGame()
  // Save a reference to it in the GameProject class.
  CityOfAaron.setTheGame(theGame);
  // Display the Banner Page.
- System.out.println("Welcome to the city of Aaron."
-         + "You are destined to be the new ruler of this city."
-         + "High Priest Joe has given you this list of responsibilities:"
-         + "Buy and sell land, figure out how much wheat to plant each year"
-         + "and how much to feed your people. Make sure you pay your annual"
-         + "wheat tithe or you will all die! Be careful or you and your people"
-         + "will starve to death. Beware of the rats, they will eat your wheat.");
+ System.out.println(
+          "********************************************************\n" +
+           "* Welcome to the city of Aaron.*\n" +
+           "* You are destined to be the new ruler of this city.*\n" +
+          "* High Priest Joe has given you this list of responsibilities:*\n" +
+          "* Buy and sell land, figure out how much wheat to plant each year *\n"+
+          "* and how much to feed your people. Make sure you pay your annual*\n" +
+          "* wheat tithe or you will all die! Be careful or you and your people*\n" +
+          "* will starve to death. Beware of the rats, they will eat your wheat.*\n" +
+         "********************************************************\n");
  // Create a new Player object
  Player thePlayer = new Player();
  // Prompt for and get the user’s name.
@@ -99,6 +103,8 @@ public void startNewGame()
  theGame.setThePlayer(thePlayer);
  // Display a welcome message
  System.out.println("Welcome " + name + ',' + " have fun!");
+ // call the createNewGame( ) method. Pass the name as a parameter
+ GameControl.createNewGame(name);
  // Display the Game menu
  GameMenuView gmv = new GameMenuView();
  gmv.displayMenu();
