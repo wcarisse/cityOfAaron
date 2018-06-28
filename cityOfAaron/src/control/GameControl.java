@@ -76,39 +76,136 @@ loc.setSymbol("~~~");
 // set this location object in each cell of the array in column 4
 for(int i = 0; i < MAX_ROW; i++)
     {
-    theMap.setLocation(i, 4, loc);
+    theMap.setLocation(i, 3, loc);
     }
 
 // define the string for a farm land location
-String farmland = "You are on the fertile banks of the River.\n" +
+String farmland1 = "You are on the fertile banks of the River.\n" +
 "In the spring, this low farmland floods and is covered with rich\n" +
 "new soil. Wheat is planted as far as you can see.";
 // set a farmland location with a hint
 loc = new Location();
-loc.setDescription(farmland + "\n One bushel will plant two acres of wheat.");
-loc.setSymbol("!!!");
+loc.setDescription(farmland1 + "\n One bushel will plant two acres of wheat.");
+loc.setSymbol("!!1");
 theMap.setLocation(0, 2, loc); 
 
-//NEW LOCATION
+//NEW LOCATION: Farmland 2
+String farmland2 = "You are just north of the Granary and Storehouse. \n" +
+                   "Golden wheat surrounds you, and the sharp aroma of \n" +
+                   "fertilizer fills your senses.";
+loc = new Location();
+loc.setDescription(farmland2 + "\n One bushel will plant two acres of wheat.");
+loc.setSymbol("!!2");
+theMap.setLocation(0, 1, loc);
 
-//NEW lOCATION
+//NEW lOCATION: Farmland3
+String farmland3 = "You are just east of the sparkling palaces of the \n" +
+                   "Ruler's Court on the fertile banks of the River. \n" +
+                   "Glorious, golden wheat that assures your livlihood \n" +
+                   "surround you, along with the cacophony of the \n" +
+                   "rushing river.";
+loc = new Location();
+loc.setDescription(farmland3 + "\n One bushel will plant two acres of wheat.");
+loc.setSymbol("!!3");
+theMap.setLocation(2, 2, loc); 
 
-//NEW LOCATION
+//NEW LOCATION: Undeveloped Lands
+String undevelopedLand = "Thick jungle and undergrowth surround you here in \n" +
+                     "the Undeveloped Lands just east of the river. \n" +
+                     "There is nothing here worth taking or using to \n" +
+                     "help our City thrive.";
+loc = new Location();
+loc.setDescription(undevelopedLand + "\n Nothing of use here.");
+loc.setSymbol(",,,");
+for(int i = 0; i < MAX_ROW; i++)
+    {
+    theMap.setLocation(i, 4, loc);
+    }
 
-//NEW LOCATION
+//NEW LOCATION: Forests
+String forest = "Here you are surrounded by beautiful, majestic trees \n" +
+                "and ferns. You can hear children giggling while playing \n" +
+                "games and exploring. You feel at peace.";
+loc = new Location();
+loc.setDescription(forest);
+loc.setSymbol("^^^");
+for(int i = 0; i < MAX_ROW; i++)
+    {
+    theMap.setLocation(i, 0, loc);
+    }
 
-//NEW LOCATION
+//NEW LOCATION: Lamanite Border
+String lamaniteBorder = "Only danger awaits you here at the border to \n" +
+                        "the savage Lamanite lands. Turn back immediately \n" +
+                        "or face certain death!";
+loc = new Location();
+loc.setDescription(lamaniteBorder + "\n STAY AWAY! DANGER!");
+loc.setSymbol("xxx");
+for(int i = 0; i < MAX_ROW; i++)
+    {
+    theMap.setLocation(4, i, loc);
+    }
 
-//NEW LOCATION
+//NEW LOCATION: Granary and Storehouse
+String storehouse = "You are here visiting the City's Granary and \n" +
+                    "storehouse just north of the Ruler's Court. All \n" +
+                    "around you people are working to sift the wheat \n" +
+                    "in preparation for storage and new planting.";
+loc = new Location();
+loc.setDescription(storehouse + "\n Beware of rats!" );
+loc.setSymbol("$$$");
+theMap.setLocation(1, 1, loc); 
 
+//NEW LOCATION: Ruler's Court
+String rulersCourt = "You are here at the majestic palaces in the Ruler's \n" +
+                     "court. Here, all of the important decisions are made \n" +
+                     "regarding the city and the distribution of wheat. \n" +
+                     "Hopefully, good decisions are made to ensure our \n" +
+                     "grand city's survival!";
+loc = new Location();
+loc.setDescription(rulersCourt + "\n Be Wise and Pay Tithes!");
+loc.setSymbol("<^>");
+theMap.setLocation(2, 1, loc); 
+
+//NEW LOCATION: village
+String village = "Here you arrive in the modest and clean little village \n" +
+                 "where the hardworking citizes of the City of Aaron live. \n" +
+                 "To the north and south are beautiful fields of wheat and \n" +
+                 "you can hear the roaring of the river to the east. \n" +
+                 "Thankfully, the granary and storehouse is located \n" +
+                 "directly to the west; a convenient location for the workers!";
+loc = new Location();
+loc.setDescription(village + "\n Be sure to feed the citizens or they will \n" +
+                                "be most unhappy with your Rule.");
+loc.setSymbol("(*)");
+theMap.setLocation(1, 2, loc); 
+
+//NEW LOCATION: Desert
+String desert = "Here barren delosolation is the only thing in view. No \n" +
+                "food, water, or shelter. This is defintely not a good \n" +
+                "place to build nor grow our precious wheat!";
+loc = new Location();
+loc.setDescription(desert);
+loc.setSymbol("@@@");
+theMap.setLocation(3, 1, loc);
+
+//NEW LOCATION: Lake
+String lake = "You arrive at the edge of the great Lake Bob. This lake \n" +
+              "is, unfotunately, all salt water, and is of no use to \n" +
+              "the City of Aaron except as a nice place to cool off during \n" +
+              "the hot months of summer";
+loc = new Location();
+loc.setDescription(lake);
+loc.setSymbol("ooo");
+theMap.setLocation(3, 2, loc); 
 
 theGame.setMap(theMap);
 }
 
 public static void displayMap(){
-   String[][] theMap = { {"zero", "one", "!!!", "~~~", "four"},
+   String[][] theMap = { {"zero", "!!1", "!!1", "~~~", "four"},
                           {"zero", "one", "two", "~~~", "four"},
-                          {"zero", "one", "two", "~~~", "four"},
+                          {"zero", "one", "!!3", "~~~", "four"},
                           {"zero", "one", "two", "~~~", "four"},
                           {"zero", "one", "two", "~~~", "four"}
     }; 
