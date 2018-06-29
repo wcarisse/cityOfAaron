@@ -214,10 +214,21 @@ public static void displayMap(){
       
     for (int i = 0; i < rowCount; i++){
         for (int j = 0; j < colCount; j++){
-            System.out.print(theMap.getLocation(i, j).getSymbol()+ " ");
+            System.out.println(theMap.getLocation(i,j).getSymbol()+ " ");
         }
     }   
 }
+
+/*public static void createAnimalList()
+        {
+            ArrayList<ListItem> animals = new ArrayList<ListItem>();
+            animals.add(new ListItem("cows", 18));
+            animals.add(new ListItem("horses", 5));
+             animals.add(new ListItem("pigs", 7));
+            animals.add(new ListItem("chickens", 14));
+            // Save the animals in the game
+            theGame.setAnimals(animals);
+        }*/
 
  
 }

@@ -16,7 +16,9 @@ public class ListItem implements Serializable{
     private int number;
 
     public ListItem() {
+        //ListItem animals = new ListItem();
     }
+
     
     
     public String getName() {

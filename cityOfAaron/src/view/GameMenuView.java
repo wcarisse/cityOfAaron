@@ -62,8 +62,8 @@ public class GameMenuView extends MenuView {
             case 1: // view the map
             viewMap();
             break;
-            case 2: // provides user with list of options
-            displayListMenuView();
+            case 2: // view a list
+            viewList();
             break;
             case 3: // move to a new location
             moveToNewLocation();
@@ -76,6 +76,19 @@ public class GameMenuView extends MenuView {
         }
     } 
     
+    /**
+    *The viewList() method
+    * Purpose: Creates a ViewList object and calls its
+    * displayMenuView ( ) method
+    * Parameters: none
+    * Returns: none
+    */
+    public void viewList()
+    {
+        ListView lv = new ListView();
+        lv.displayMenuView();
+    } 
+
     public void viewMap()
     {
        GameControl gameControl = new GameControl();
