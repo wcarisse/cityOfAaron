@@ -12,10 +12,12 @@ package view;
 
 import java.util.Scanner;
 import cityofaaron.CityOfAaron;
+import control.GameControl;
 import model.Player;
 import model.Game;
 import model.CropData;
 import model.Map;
+
 
 public class GameMenuView extends MenuView {
     Scanner keyboard = new Scanner(System.in);
@@ -76,8 +78,8 @@ public class GameMenuView extends MenuView {
     
     public void viewMap()
     {
-        
-        Map theMap = theGame.getMap();
+       GameControl gameControl = new GameControl();
+       gameControl.displayMap();
     }
 
     public void displayListMenuView()

@@ -27,7 +27,8 @@ public static void createNewGame(String name)
     theGame.setThePlayer(thePlayer); 
 // create the CropData object
 // call the createMap method()
-    
+    GameControl gameControl = new GameControl();
+    gameControl.createMap();
 }
 
    public static void createCropDataObject()
@@ -46,10 +47,11 @@ public static void createNewGame(String name)
     theCrops.setOfferingBushels(300);
     theCrops.setAcresPlanted(1000);
 // Save the cropData in the Game object
-theGame.setCrop(theCrops);
+    theGame.setCrop(theCrops);
 }
    
 // create the list of animals
+   
 // create the list of tools
 //create the list of provisions
    
@@ -61,7 +63,7 @@ theGame.setCrop(theCrops);
 * Parameters: none
 * Returns: none
 */
-public static void createMap()
+public void createMap()
 {
     // create the Map object,
 // refer to the Map constructor
@@ -207,11 +209,11 @@ theGame.setMap(theMap);
 
 public static void displayMap(){
     Map theMap = theGame.getMap();
-    Map colCount = Map.class.getColCount();
-    Map rowCount = getRowCount();
+    int rowCount = theMap.getRowCount();
+    int colCount = theMap.getColCount();
       
-    for (int i = 0; i < colCount.length; i++){
-        for (int j = 0; j < colCount[i].length; j++){
+    for (int i = 0; i < rowCount; i++){
+        for (int j = 0; j < colCount; j++){
             System.out.print(theMap.getLocation(i, j).getSymbol()+ " ");
         }
     }   
