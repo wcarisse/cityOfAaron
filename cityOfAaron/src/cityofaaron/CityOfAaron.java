@@ -19,7 +19,7 @@ import model.Game;
  */
 public class CityOfAaron {
       // variable for keeping a reference to the Game object
-        private static final Game theGame = null;
+        private static Game theGame = null;
 
     /**
      * @param args the command line arguments
@@ -78,7 +78,7 @@ public class CityOfAaron {
     }
 
     public static void setTheGame(Game theGame) {
-        theGame = getTheGame();
+        CityOfAaron.theGame = theGame;
     }
 
     public static Game getTheGame() {

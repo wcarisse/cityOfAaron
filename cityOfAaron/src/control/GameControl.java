@@ -26,7 +26,10 @@ public static void createNewGame(String name)
     thePlayer.setName(name);
     theGame.setThePlayer(thePlayer); 
 // create the CropData object
+// call the createMap method()
+    
 }
+
    public static void createCropDataObject()
 {
     CropData theCrops = new CropData();
@@ -203,19 +206,13 @@ theGame.setMap(theMap);
 }
 
 public static void displayMap(){
-    Game theGame = CityOfAaron.getTheGame();
-    
-    
-   String[][] theMap = { {"^^^", "!!2", "!!1", "~~~", ",,,"},
-                         {"^^^", "$$$", "(*)", "~~~", ",,,"},
-                         {"^^^", "<^>", "!!3", "~~~", ",,,"},
-                         {"^^^", "@@@", "ooo", "~~~", ",,,"},
-                         {"xxx", "xxx", "xxx", "~~~", ",,,"}
-    }; 
+    Map theMap = theGame.getMap();
+    Map colCount = Map.class.getColCount();
+    Map rowCount = getRowCount();
       
-    for (int i = 0; i < theMap.length; i++){
-        for (int j = 0; j < theMap[i].length; j++){
-            System.out.println(theMap[i][j]);
+    for (int i = 0; i < colCount.length; i++){
+        for (int j = 0; j < colCount[i].length; j++){
+            System.out.print(theMap.getLocation(i, j).getSymbol()+ " ");
         }
     }   
 }

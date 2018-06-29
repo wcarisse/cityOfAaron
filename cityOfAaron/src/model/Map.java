@@ -39,7 +39,15 @@ this.rowCount = _rows;
 this.colCount = _cols;
 // create the array of location objects
 this.locations = new Location[_rows][_cols];
+}
 
+//Getter method for colCount
+public int getColCount() {
+    return colCount;
+}
+//Getter for rowCount
+public int getRowCount() {
+    return rowCount;
 }
 /**
 * The getLocation method
