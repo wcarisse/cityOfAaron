@@ -57,7 +57,7 @@ public static void createNewGame(String name)
    
    
 //create the list of provisions
-   public static void createProvisionsList()
+  /* public static void createProvisionsList()
         {
             ArrayList<ListItem> provisions = new ArrayList<ListItem>();
             provisions.add(new ListItem("cows", 18));
@@ -66,7 +66,20 @@ public static void createNewGame(String name)
             provisions.add(new ListItem("chickens", 14));
             // Save the animals in the game
             theGame.setProvisions(provisions);
+        }*/
+   
+  //create the list of animals
+public static void createAnimalList()
+        {
+            ArrayList<ListItem> animals = new ArrayList<>();
+            animals.add(new ListItem("cows", 18));
+            animals.add(new ListItem("horses", 5));
+            animals.add(new ListItem("pigs", 7));
+            animals.add(new ListItem("chickens", 14));
+            // Save the animals in the game
+            theGame.setAnimals(animals);
         }
+
    
    
 // create the Locations and the Map object     
@@ -232,17 +245,5 @@ public static void displayMap(){
         }
     }   
 }
-
-/*public static void createAnimalList()
-        {
-            ArrayList<ListItem> animals = new ArrayList<ListItem>();
-            animals.add(new ListItem("cows", 18));
-            animals.add(new ListItem("horses", 5));
-             animals.add(new ListItem("pigs", 7));
-            animals.add(new ListItem("chickens", 14));
-            // Save the animals in the game
-            theGame.setAnimals(animals);
-        }*/
-
  
 }

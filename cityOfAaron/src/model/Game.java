@@ -6,6 +6,8 @@
 package model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import model.ListItem;
 /**
  *
  * @author Carissa, Kyli, and Kate
@@ -47,5 +49,9 @@ public class Game implements Serializable {
    
     public void setMap(Map theMap) {
         this.theMap = theMap;
+    }
+
+    public void setAnimals(ArrayList<ListItem> animals) {
+        //this.animals = Array<ListItem>;
     }
 }

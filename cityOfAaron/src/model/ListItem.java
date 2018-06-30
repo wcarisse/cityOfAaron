@@ -15,11 +15,15 @@ public class ListItem implements Serializable{
     private String name;
     private int number;
 
+    
+    
     public ListItem() {
-        //ListItem animals = new ListItem();
+ 
     }
 
-    
+    public ListItem(String name, int number){
+       
+    }
     
     public String getName() {
         return name;
