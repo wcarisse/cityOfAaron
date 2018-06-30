@@ -7,12 +7,13 @@ package model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import model.ListItem;
+
 /**
  *
  * @author Carissa, Kyli, and Kate
  */
 public class Game implements Serializable {
+    private ArrayList<ListItem> provisions;
     private Player thePlayer;
     public Player getThePlayer() {
         return thePlayer;
@@ -52,6 +53,15 @@ public class Game implements Serializable {
     }
 
     public void setAnimals(ArrayList<ListItem> animals) {
-        //this.animals = Array<ListItem>;
+        //this.animals = ArrayList<ListItem>;
+    }
+    
+    //Provisions getter and setter
+    //By Carissa Cunningham
+    public void setProvisions(ArrayList<ListItem> provisions) {
+        //this.provisions = ArrayList<ListItem>;
+    }
+    public ArrayList<ListItem> getProvisions() {
+        return provisions;
     }
 }

@@ -49,24 +49,32 @@ public static void createNewGame(String name)
 // Save the cropData in the Game object
     theGame.setCrop(theCrops);
 }
-   
-// create the list of animals
-   
-   
+
 // create the list of tools
    
    
 //create the list of provisions
-  /* public static void createProvisionsList()
+   //Created by Carissa Cunningham
+   public static void createProvisionsList()
         {
             ArrayList<ListItem> provisions = new ArrayList<ListItem>();
-            provisions.add(new ListItem("cows", 18));
-            provisions.add(new ListItem("horses", 5));
-            provisions.add(new ListItem("pigs", 7));
-            provisions.add(new ListItem("chickens", 14));
-            // Save the animals in the game
+            provisions.add(new ListItem("venison-jerky", 20));
+            provisions.add(new ListItem("waterskins", 19));
+            provisions.add(new ListItem("cloth", 10));
+            provisions.add(new ListItem("rope", 4));
+            provisions.add(new ListItem("tents", 21));
+            provisions.add(new ListItem("flint/steel", 6));
+            provisions.add(new ListItem("cooking-pot", 3));
+            // Save the provisions in the game
             theGame.setProvisions(provisions);
-        }*/
+        }
+ //display the list of provisions
+   //created by Carissa Cunningham
+   public static void displayProvisions() {
+       ArrayList<ListItem> listItem = theGame.getProvisions();
+       //for each loop goes here
+   }
+   
    
   //create the list of animals
 public static void createAnimalList()
