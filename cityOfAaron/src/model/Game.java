@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class Game implements Serializable {
     private ArrayList<ListItem> provisions;
     private Player thePlayer;
+    private ArrayList<ListItem> tools;
     public Player getThePlayer() {
         return thePlayer;
     }
@@ -63,5 +64,12 @@ public class Game implements Serializable {
     }
     public ArrayList<ListItem> getProvisions() {
         return provisions;
+    }
+    
+    public void setTools(ArrayList<ListItem> tools) {
+        this.tools = tools;
+    }
+    public ArrayList<ListItem> getTools() {
+        return tools;
     }
 }

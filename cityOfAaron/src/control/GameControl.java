@@ -92,7 +92,30 @@ public static void createAnimalList()
             theGame.setAnimals(animals);
         }
 
+   //create the list of tools
+   //@author Kyli Barnes 6/30/2018
+   public static void createToolsList()
+        {
+            ArrayList<ListItem> tools = new ArrayList<ListItem>();
+            tools.add(new ListItem("hammer", 10));
+            tools.add(new ListItem("knife", 20));
+            tools.add(new ListItem("club", 7));
+            tools.add(new ListItem("saw", 2));
+            tools.add(new ListItem("nails", 42));
+        
+            // Save the tools in the game
+            theGame.setTools(tools);
+        }
    
+    //display Tools list
+     public static void displayTools() {
+       ArrayList<ListItem> tools = theGame.getTools();
+    //for each loop
+    tools.forEach((listItem) -> {
+        System.out.println("\n\tListItem: " + listItem.getName() +
+                           "\n\tQuantity: " + listItem.getNumber());
+    });
+     }
    
 // create the Locations and the Map object     
 /**
