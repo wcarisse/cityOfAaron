@@ -52,8 +52,21 @@ public static void createNewGame(String name)
    
 // create the list of animals
    
+   
 // create the list of tools
+   
+   
 //create the list of provisions
+   public static void createProvisionsList()
+        {
+            ArrayList<ListItem> provisions = new ArrayList<ListItem>();
+            provisions.add(new ListItem("cows", 18));
+            provisions.add(new ListItem("horses", 5));
+            provisions.add(new ListItem("pigs", 7));
+            provisions.add(new ListItem("chickens", 14));
+            // Save the animals in the game
+            theGame.setProvisions(provisions);
+        }
    
    
 // create the Locations and the Map object     

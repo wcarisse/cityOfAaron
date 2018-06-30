@@ -17,6 +17,7 @@ import model.Player;
 import model.Game;
 import model.CropData;
 import model.Map;
+import view.ListMenuView;
 
 
 public class GameMenuView extends MenuView {
