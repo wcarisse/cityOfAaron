@@ -59,7 +59,7 @@ public class Game implements Serializable {
     //Provisions getter and setter
     //By Carissa Cunningham
     public void setProvisions(ArrayList<ListItem> provisions) {
-        //this.provisions = ArrayList<ListItem>;
+        this.provisions = provisions;
     }
     public ArrayList<ListItem> getProvisions() {
         return provisions;

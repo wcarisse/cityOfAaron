@@ -71,8 +71,12 @@ public static void createNewGame(String name)
  //display the list of provisions
    //created by Carissa Cunningham
    public static void displayProvisions() {
-       ArrayList<ListItem> listItem = theGame.getProvisions();
-       //for each loop goes here
+       ArrayList<ListItem> provisions = theGame.getProvisions();
+       //for each loop
+       for (ListItem listItem : provisions) {
+           System.out.println("\n\tListItem: " + listItem.getName() +
+                              "\n\tQuantity: " + listItem.getNumber());
+       }
    }
    
    
