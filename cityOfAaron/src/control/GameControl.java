@@ -213,8 +213,9 @@ public static void displayMap(){
     int colCount = theMap.getColCount();
       
     for (int i = 0; i < rowCount; i++){
+        System.out.print("\n");
         for (int j = 0; j < colCount; j++){
-            System.out.println(theMap.getLocation(i,j).getSymbol()+ " ");
+            System.out.print(theMap.getLocation(i,j).getSymbol()+ " ");
         }
     }   
 }

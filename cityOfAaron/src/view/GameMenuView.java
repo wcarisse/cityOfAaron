@@ -85,8 +85,8 @@ public class GameMenuView extends MenuView {
     */
     public void viewList()
     {
-        ListView lv = new ListView();
-        lv.displayMenuView();
+        ListMenuView lv = new ListMenuView();
+        lv.displayMenu();
     } 
 
     public void viewMap()
