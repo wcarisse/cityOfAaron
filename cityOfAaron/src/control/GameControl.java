@@ -29,6 +29,10 @@ public static void createNewGame(String name)
 // call the createMap method()
     GameControl gameControl = new GameControl();
     gameControl.createMap();
+    
+    //call the displayAnimals()
+    GameControl animalList = new GameControl();
+    animalList.createAnimalList();
 }
 
    public static void createCropDataObject()
@@ -81,6 +85,7 @@ public static void createNewGame(String name)
    
    
   //create the list of animals
+   //@author Kate Lewis 6/30/2018
 public static void createAnimalList()
         {
             ArrayList<ListItem> animals = new ArrayList<>();
