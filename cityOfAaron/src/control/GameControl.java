@@ -92,6 +92,15 @@ public static void createAnimalList()
             theGame.setAnimals(animals);
         }
 
+public static void displayAnimals() {
+       ArrayList<ListItem> animals = theGame.getAnimals();
+       //for each loop
+       for (ListItem listItem : animals) {
+           System.out.println("\n\tListItem: " + listItem.getName() +
+                              "\n\tQuantity: " + listItem.getNumber());
+       }
+   }
+
    //create the list of tools
    //@author Kyli Barnes 6/30/2018
    public static void createToolsList()

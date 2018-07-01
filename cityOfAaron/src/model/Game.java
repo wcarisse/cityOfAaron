@@ -16,6 +16,8 @@ public class Game implements Serializable {
     private ArrayList<ListItem> provisions;
     private Player thePlayer;
     private ArrayList<ListItem> tools;
+    private ArrayList<ListItem> animals;
+    
     public Player getThePlayer() {
         return thePlayer;
     }
@@ -52,9 +54,13 @@ public class Game implements Serializable {
     public void setMap(Map theMap) {
         this.theMap = theMap;
     }
-
+    // Animals getter & setter by Kate Lewis
     public void setAnimals(ArrayList<ListItem> animals) {
-        //this.animals = ArrayList<ListItem>;
+        this.animals = animals;
+    }
+    
+    public ArrayList<ListItem> getAnimals(){
+        return animals;
     }
     
     //Provisions getter and setter
