@@ -33,6 +33,15 @@ public static void createNewGame(String name)
     //call the displayAnimals()
     GameControl animalList = new GameControl();
     animalList.createAnimalList();
+    
+    //call displayProvisions()
+    GameControl provisionsList = new GameControl();
+    provisionsList.createProvisionsList();
+    
+    //Call displayTools()
+    GameControl toolsList = new GameControl();
+    toolsList.createToolsList();
+   
 }
 
    public static void createCropDataObject()

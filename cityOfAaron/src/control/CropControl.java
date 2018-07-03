@@ -5,6 +5,7 @@
 package control;
 import java.util.Random;
 import model.CropData;
+import exceptions.CropException;
 
 public class CropControl { 
     //contants
@@ -32,16 +33,16 @@ public class CropControl {
 * and price of land must be <= wheatInStore
 */
     
-    public static int buyLand( int landPrice, int acresToBuy, CropData cropData) {
+    public static void buyLand( CropData cropData, int landPrice, int acresToBuy) throws CropException {
         landPrice =  calcLandPrice();
         //If acresToBuy is <0, return -1
         if (acresToBuy < 0)
-            return -1;
+            throw new CropException("A negative value was input");
         
         //If acresToBuy is > wheatInStore / landPrice, return -1
         int wheatInStore = cropData.getWheatInStore();
         if (acresToBuy > wheatInStore / landPrice)
-            return -1;
+            throw new CropException("There is insufficient wheat to buy this much land");
         
         // wheatInStore –= (acresToBuy * landPrice)
         wheatInStore -= (acresToBuy * landPrice);
@@ -50,15 +51,11 @@ public class CropControl {
         //population = acresToBuy / 10
         int population = cropData.getPopulation();
         if (population < acresToBuy / 10)
-            return -1;
+            throw new CropException("No enough people are avaible to plant! Please try again");
         
         // acresOwned += acresToBuy
         int acresOwned = cropData.getAcresOwned();
         acresOwned += acresToBuy;
-      
-        //return acresOwned
-        return acresOwned;
-        
     }
     /*
     * The plantCrops Method
