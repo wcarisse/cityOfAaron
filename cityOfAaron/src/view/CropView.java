@@ -105,13 +105,28 @@ public class CropView {
         int acresOwned = cropData.getAcresOwned();
       // Prompt the user to enter the number of wheat to plant
         System.out.format("You have %d bushels of wheat in storage.%n",wheatInStore + "and %d acres of land.%n",acresOwned);
-        System.out.print("How many acres of land do you wish to plant? ");
-      //Get User's input and save it
         int toPlant;
-        toPlant = keyboard.nextInt();
-        // Call the plantCrops() method in the CropControl layer to buy the land
-        CropControl.plantCrops (toPlant, wheatInStore, acresOwned, cropData);
+        boolean paramsNotOkay;
+        do
+        {
+            paramsNotOkay = false;
+            System.out.print("How many acres of land do you wish to plant? ");
+            //Get User's input and save it
+            toPlant = keyboard.nextInt();
+            try
+            {
+              // Call the plantCrops() method in the CropControl layer to buy the land
+               CropControl.plantCrops ( toPlant, wheatInStore, cropData);  
+            }
+            catch(CropException e)
+            {
+                System.out.println("I am sorry master, I cannot do this."); 
+                System.out.println(e.getMessage()); 
+                paramsNotOkay = true;
+            }
+        } while(paramsNotOkay); 
     }
+   
     
  public void displayCropsReportView()
  {

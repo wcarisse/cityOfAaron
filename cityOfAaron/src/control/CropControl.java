@@ -69,23 +69,22 @@ public class CropControl {
     * @author Carissa Cunningham
     */
 
-    public static int plantCrops ( int acresToPlant, int requiredWheat, CropData cropData)
+    public static void plantCrops ( int acresToPlant, int requiredWheat, CropData cropData) throws CropException
     {
         //If acresToPlant is < 0, return -1
         if (acresToPlant < 0)
-            return -1;
+            throw new CropException("A negative value was input!\n Please try again!");
         //requiredWheat = acresToPlant divided by 2
         requiredWheat = acresToPlant / 2;
         //If requiredWheat is > wheatInStore, return -1
         int wheatInStore = cropData.getWheatInStore();
         if (requiredWheat > wheatInStore)
-            return -1;
+            throw new CropException("Not enough wheat to plant!");
         //wheatInStore –= requiredWheat
         wheatInStore -= requiredWheat;
         cropData.setWheatInStore(wheatInStore);
-        //return wheatInStore
-        return wheatInStore;
     }
+    
         //author: Kyli Barnes
         //date modified: 6/1/18
         /*
