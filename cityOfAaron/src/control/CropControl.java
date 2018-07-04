@@ -120,13 +120,13 @@ public class CropControl {
 	*/
         //Author Kate Lewis
 
-        public static double setOffering(double n, CropData cropData) {
+        public static double setOffering(double n, CropData cropData) throws CropException {
             //If n < 0 , return -1
             if (n < 0)
-                return -1;
+                throw new CropException("Cannot be less than 0!\n Please try again!");
             //If n > 100, return -1
             if (n > 100) 
-                return -1;
+                throw new CropException("Must be lower than 100!\n Please try again!");
             //setOffering = wheatInStore * n
             double wheatInStore = cropData.getWheatInStore();
             double setOffering = wheatInStore * n;

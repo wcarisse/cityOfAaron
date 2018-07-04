@@ -109,7 +109,9 @@ public class GameMenuView extends MenuView {
     
     public void manageCrops()
     {
-        System.out.println("Lots of stuff goes here");
+        //System.out.println("Lots of stuff goes here");
+        CropView cv = new CropView();
+        cv.buyLandView();
     }
     
     public void displayMainMenuView()
