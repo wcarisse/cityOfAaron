@@ -28,11 +28,11 @@ public class ListMenuView extends MenuView {
          "**********************************\n" +
          "* CITY OF AARON: LIST MENU *\n" +
          "**********************************\n" +
-         " 1 - Animals\n" +
-         " 2 - Tools\n" +
-         " 3 - Provisions\n" +
-         " 4 - Teams\n" +
-         " 5 - Main Menu\n",
+         " 1 - View the Animals in the Storehouse\n" +
+         " 2 - View the Tools in the Workshed\n" +
+         " 3 - View the Provisions in the Storehouse\n" +
+         " 4 - View the Authors of the game\n" +
+         " 5 - Return to the Game Menu\n",
         5);
     }
  
@@ -62,7 +62,7 @@ public class ListMenuView extends MenuView {
                 listTeam();
                 break;
                 case 5:
-                System.out.println("Return to Main Menu");
+                backToGameMenu();
                }
         }
  
@@ -86,6 +86,10 @@ public class ListMenuView extends MenuView {
  
     public void listTeam()
     {
-     System.out.println("list team");
+     System.out.println("Kyli Barnes, Carissa Cunningham and Kate Lewis");
+    }
+    
+    public void backToGameMenu() {
+        
     }
 }
