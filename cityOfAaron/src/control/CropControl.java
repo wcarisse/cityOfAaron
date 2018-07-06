@@ -89,7 +89,7 @@ public class CropControl {
     }
     
         //author: Kyli Barnes
-        //date modified: 6/1/18
+        //date modified: 6/1/18,7/6/18
         /*
         *The feedThePeople method
         *Purpose: to feed the people
@@ -99,19 +99,18 @@ public class CropControl {
         *Pre-conditions: bushels set aside to feed people must be positive 
         *and the amount of wheat in store must be >= the number of bushels that are to be set aside.
         */
-        public static int feedPeople (int numberOfBushels, CropData cropData){
+        public static void feedPeople (int numberOfBushels, CropData cropData) throws CropException {
             //If numberOfBushels is <0, return -1
             if (numberOfBushels < 0)
-                return -1;
+                throw new CropException("There isn't enough wheat!\n Please try again.");
             //If numberofBushels is > wheatInStore, return -1
             int wheatInStore = cropData.getWheatInStore();
             if (numberOfBushels > wheatInStore)
-                return -1;
+                throw new CropException("There isn't enough wheat in storage to feed everyone!\n Please enter a new number.");
             //Wheat = wheatInStore – numberOfBushels
             wheatInStore -= numberOfBushels;
             cropData.setWheatInStore(wheatInStore);
-            //Return wheatInStore 
-                return wheatInStore;
+            
 
 }
         /*

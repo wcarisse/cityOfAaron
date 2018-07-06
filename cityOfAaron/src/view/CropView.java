@@ -212,9 +212,26 @@ public int getcropsReportOption() {
         int wheatInStore = cropData.getWheatInStore();
         // Get the user’s input and save it.
         int toFeed;
-        toFeed = keyboard.nextInt();
-        // Call the feedPeople( ) method in the control layer to buy the land
-        CropControl.feedPeople(toFeed,cropData);
+        boolean paramsNotOkay;
+        do
+        {
+           paramsNotOkay = false;
+           System.out.print("How many bushels of feed do you want? ");
+           toFeed = keyboard.nextInt();
+           try {
+               // Call the feedPeople( ) method in the control layer to buy the land
+                CropControl.feedPeople(toFeed,cropData);
+           }
+           catch(CropException e){
+                System.out.println("Sorry, try again."); 
+                System.out.println(e.getMessage()); 
+                paramsNotOkay = true;
+            }
+        } while(paramsNotOkay);
+           
     }
-
-}
+        
+    }
+        
+         
+     
