@@ -22,6 +22,9 @@ public class CropControl {
         return landPrice;
     }
     
+    //CropControl cropControl = new CropControl();
+    //cropControl.buyLand();
+    
 /*
 * The buyLand method
 * Purpose: to buy land

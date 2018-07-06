@@ -25,7 +25,7 @@ public static void createNewGame(String name)
     Player thePlayer = new Player();
     thePlayer.setName(name);
     theGame.setThePlayer(thePlayer); 
-// create the CropData object
+
 // call the createMap method()
     GameControl gameControl = new GameControl();
     gameControl.createMap();
@@ -43,7 +43,7 @@ public static void createNewGame(String name)
     toolsList.createToolsList();
    
 }
-
+    // create the CropData object
    public static void createCropDataObject()
 {
     CropData theCrops = new CropData();
