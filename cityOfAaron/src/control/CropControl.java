@@ -21,7 +21,7 @@ public class CropControl {
         int landPrice = random.nextInt(LAND_RANGE) + LAND_BASE;
         return landPrice;
     }
-    
+
     //CropControl cropControl = new CropControl();
     //cropControl.buyLand();
     
@@ -35,7 +35,6 @@ public class CropControl {
 * Pre-conditions: acres to buy must be positive
 * and price of land must be <= wheatInStore
 */
-    
     public static void buyLand( CropData cropData, int landPrice, int acresToBuy) throws CropException {
         landPrice =  calcLandPrice();
         //If acresToBuy is <0, return -1

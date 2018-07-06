@@ -185,8 +185,7 @@ public class CropView {
  */
  // ===================================
  public void doAction(int option)
-   {
-           
+   { 
          switch (option)
         {
             case 1: // display wheat in store
@@ -227,11 +226,10 @@ public int getcropsReportOption() {
                 System.out.println(e.getMessage()); 
                 paramsNotOkay = true;
             }
-        } while(paramsNotOkay);
-           
+        } while(paramsNotOkay);     
     }
         
-    }
+}
         
          
      

@@ -62,9 +62,6 @@ public static void createNewGame(String name)
 // Save the cropData in the Game object
     theGame.setCrop(theCrops);
 }
-
-// create the list of tools
-   
    
 //create the list of provisions
    //Created by Carissa Cunningham
@@ -90,8 +87,7 @@ public static void createNewGame(String name)
            System.out.println("\n\tListItem: " + listItem.getName() +
                               "\n\tQuantity: " + listItem.getNumber());
        }
-   }
-   
+   }   
    
   //create the list of animals
    //@author Kate Lewis 6/30/2018
