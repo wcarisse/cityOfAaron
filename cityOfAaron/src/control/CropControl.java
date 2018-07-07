@@ -21,9 +21,6 @@ public class CropControl {
         int landPrice = random.nextInt(LAND_RANGE) + LAND_BASE;
         return landPrice;
     }
-
-    //CropControl cropControl = new CropControl();
-    //cropControl.buyLand();
     
 /*
 * The buyLand method
@@ -44,7 +41,7 @@ public class CropControl {
         //If acresToBuy is > wheatInStore / landPrice, return -1
         int wheatInStore = cropData.getWheatInStore();
         if (acresToBuy > wheatInStore / landPrice)
-            throw new CropException("There is insufficient wheat to buy this much land");
+            throw new CropException("There is insufficient wheat to buy this much land.");
         
         // wheatInStore –= (acresToBuy * landPrice)
         wheatInStore -= (acresToBuy * landPrice);
@@ -53,12 +50,13 @@ public class CropControl {
         //population = acresToBuy / 10
         int population = cropData.getPopulation();
         if (population < acresToBuy / 10)
-            throw new CropException("No enough people are avaible to plant! Please try again");
+            throw new CropException("Not enough people are available to plant! Please try again");
         
         // acresOwned += acresToBuy
         int acresOwned = cropData.getAcresOwned();
         acresOwned += acresToBuy;
     }
+    
     /*
     * The plantCrops Method
     * Purpose: to plant crops
@@ -70,7 +68,6 @@ public class CropControl {
     * and wheat required must be <= wheatInStore
     * @author Carissa Cunningham
     */
-
     public static void plantCrops ( int acresToPlant, int requiredWheat, CropData cropData) throws CropException
     {
         //If acresToPlant is < 0, return -1
