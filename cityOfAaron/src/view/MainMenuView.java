@@ -32,7 +32,7 @@ public MainMenuView()
  "* CITY OF AARON: MAIN GAME MENU *\n" +
  "**********************************\n" +
  " 1 - Start new game\n" +
- " 2 - Get and start a saved game\n" +
+ " 2 - Start a saved game\n" +
  " 3 - Get help on playing the game\n" +
  " 4 - Save game\n" +
  " 5 - Quit\n",
@@ -127,9 +127,18 @@ cropData.setAcresPlanted(1000);
 theGame.setCrop(cropData);
 }
 
+// The startSavedGamemethod 
+// Purpose: loads a saved game object from disk and start the game 
+// Parameters: none 
+// Returns: none 
+// =================================== 
 public void startSavedGame()
 {
-    System.out.println("Resume Saved Game");
+    // get rid of \n character left in the stream
+    // prompt user and get a file path
+    // call the getSavedGame( ) method in the GameControlclass to load the game
+    // display the game menu for the loaded game
+
 }
  
 public void displayHelpMenuView()

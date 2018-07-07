@@ -31,50 +31,7 @@ public class CityOfAaron {
       
         MainMenuView mmv = new MainMenuView();
         mmv.displayMenu();
-
-        // TODO code application logic here
-        //Player Class Test
-        Player thePlayer = new Player();
-        
-        thePlayer.setName("Joe");
-        String thePlayerName = thePlayer.getName();
-        
-        System.out.println("Name = " + thePlayerName);
-        
-          TeamMember.OldMan.getName();
-          TeamMember.OldMan.getTitle();
-          
-        //CropData Class Test 
-        CropData testData = new CropData();
-        
-        testData.setYear(1900);
-        int testDataYear = testData.getYear();
-        
-        System.out.println("Year = " + testDataYear);
-        
-        //ListItem Class Test
-        ListItem itemOne;
-        itemOne = new ListItem ();
-        
-        itemOne.setName("tool");
-        String itemOneName;
-        itemOneName = itemOne.getName();
-        
-        System.out.println("Name = " + itemOneName);
-        
-        Location theLocation = new Location();
-        
-        theLocation.setDescription("description");
-        String theLocationDescription = theLocation.getDescription();
-        
-        System.out.println("Description = " + theLocationDescription);
-        
-        theLocation.setSymbol("symbol");
-        String theLocationSymbol= theLocation.getSymbol();
-        
-        System.out.println("Symbol = " + theLocationSymbol);
-        
-        
+ 
     }
 
     public static void setTheGame(Game theGame) {
