@@ -301,7 +301,20 @@ public static void displayMap(){
 }
 
 /** 
- * the getSavedGamemethod 
+ * the saveGame method 
+ * Purpose: save a game to disk
+ * Parameters: the file path 
+ * Returns: none 
+ * Side Effect: the game reference in the driver is updated 
+*/ 
+    public static void saveGame(Game String) 
+    {
+        
+    }
+
+
+/** 
+ * the getSavedGame method 
  * Purpose: load a saved game from disk 
  * Parameters: the file path 
  * Returns: none 
