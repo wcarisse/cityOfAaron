@@ -8,7 +8,13 @@ package control;
 import java.util.ArrayList;
 import cityofaaron.CityOfAaron;
 import model.*;
-public class GameControl
+import java.io.Serializable;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class GameControl implements Serializable
 {
 // size of the Locations array
 private static final int MAX_ROW = 5;
@@ -309,6 +315,16 @@ public static void displayMap(){
 */ 
     public static void saveGame(Game String) 
     {
+        Game theGame = null;
+        
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(String)))
+        {
+            out.writeObject(theGame);
+        }
+        catch (Exception e)
+        {
+            System.out.println("There was an error saving your game\n");
+        }
         
     }
 
@@ -324,12 +340,13 @@ public static void displayMap(){
     { 
         Game theGame= null;
         
-        try (FileInputStreamfips = new FileInputStream(filePath)) 
+        try (FileInputStream fips = new FileInputStream(filePath)) 
         { 
-            ObjectInputStreaminput = new ObjectInputStream(fips); 
+            ObjectInputStream input = new ObjectInputStream(fips); 
             theGame= (Game)  input.readObject(); 
-            CityOfAaron.setCurrentGame(theGame); 
-        } catch(Exception e) 
+            CityOfAaron.setTheGame(theGame); 
+        } 
+        catch(Exception e) 
         { 
             System.out.println("There was an error reading the saved game file\n"); 
         }
