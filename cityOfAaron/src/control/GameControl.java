@@ -313,13 +313,13 @@ public static void displayMap(){
  * Returns: none 
  * Side Effect: the game reference in the driver is updated 
 */ 
-    public static void saveGame(Game String) 
+    public static void saveGame(String Game) 
     {
         Game theGame = null;
         
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(String)))
-        {
-            out.writeObject(theGame);
+        try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(Game)))
+        { 
+            output.writeObject(Game); 
         }
         catch (Exception e)
         {
