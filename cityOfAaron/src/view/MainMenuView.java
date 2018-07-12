@@ -135,9 +135,12 @@ theGame.setCrop(cropData);
 public void startSavedGame()
 {
     // get rid of \n character left in the stream
-        //input.nextLine();
+       input.nextLine();
     // prompt user and get a file path
+    
     // call the getSavedGame( ) method in the GameControlclass to load the game
+    GameControl getSavedGame() = new GameControl();
+   
     // display the game menu for the loaded game
 
 }
