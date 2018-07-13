@@ -137,12 +137,14 @@ public void startSavedGame()
     // get rid of \n character left in the stream
        input.nextLine();
     // prompt user and get a file path
-    
+       System.out.println("Would you like to save your game?");
+       //how do we get a file path?
     // call the getSavedGame( ) method in the GameControlclass to load the game
-    GameControl getSavedGame() = new GameControl();
+        GameControl getSavedGame() = new GameControl();
    
     // display the game menu for the loaded game
-
+        GameMenuView gmv = newGameMenuView();
+        gmv.displayMenu();
 }
  
 public void displayHelpMenuView()
@@ -155,6 +157,7 @@ public void displayHelpMenuView()
 public void displaySaveGameView()
 {
     System.out.println("Display saved game");
+      
 }
 
 }
