@@ -357,37 +357,38 @@ public static void displayMap(){
     
     public void printToolsList(ArrayList<Tools>, InventoryItems, String theGame)
     {
-try (PrintWriter out = new PrintWriter(theGame))
-{
-// get a reference to the ArrayList you want to output
+        try (PrintWriter out = new PrintWriter(theGame))
+        {
+        // get a reference to the ArrayList you want to output
     
-// output a heading for the report
-    out.println("\n\n        Tools List         ");
-    out.printf("%n%-20s%10s%10s", "Description", "Quantity", "Price");
-// use a for loop to get the data from the ArrayList
-    for (Item item: toolsList) {
-// and output it
-    out.printf("%n%-20s%7d%13.2f", item.getDescription()
+        // output a heading for the report
+        out.println("\n\n        Tools List         ");
+        out.printf("%n%-20s%10s%10s", "Description", "Quantity", "Price");
+        // use a for loop to get the data from the ArrayList
+        for (Item item: toolsList) {
+        // and output it
+        out.printf("%n%-20s%7d%13.2f", item.getDescription()
                                  , item.getQuantity()
                                  , item.getPrice());
-}
-} catch(Exception e) {
-// output error message
-  System.out.println("I/O Error: " + ex.getMessage());
+        }
+        } catch(Exception e) {
+        // output error message
+        System.out.println("I/O Error: " + ex.getMessage());
 
-}
-finally
-{
-// if(output != null) close the file
-   if (output != null) {
-     try{
-       outFile.close();
-}    catch(Exception e) {
-       System.out.println("Error closing file");
-}
-}
-}
-} 
+        }
+        finally
+        {
+        // if(output != null) close the file
+        if (output != null) {
+        try {
+            outFile.close();
+        }    
+        catch(Exception e) {
+            System.out.println("Error closing file");
+        }
+        }
+        }
+    } 
 
  
 }

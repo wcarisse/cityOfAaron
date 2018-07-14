@@ -134,6 +134,7 @@ theGame.setCrop(cropData);
 // =================================== 
 public void startSavedGame()
 {
+    
     // get rid of \n character left in the stream
        input.nextLine();
     // prompt user and get a file path
@@ -144,7 +145,7 @@ public void startSavedGame()
         GameControl getSavedGame() = new GameControl();
    
     // display the game menu for the loaded game
-        GameMenuView gmv = newGameMenuView();
+        GameMenuView gmv = new GameMenuView();
         gmv.displayMenu();
 }
  
@@ -152,7 +153,7 @@ public void displayHelpMenuView()
 {
     HelpMenuView hmv = new HelpMenuView();
     hmv.displayMenu();
-    System.out.println("Help");
+    
 }
 
 public void displaySaveGameView()
