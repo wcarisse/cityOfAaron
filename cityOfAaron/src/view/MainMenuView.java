@@ -143,7 +143,7 @@ public void startSavedGame()
        file = keyboard.next();
     // call the getSavedGame( ) method in the GameControlclass to load the game
         GameControl savedGame = new GameControl();
-        savedGame = getSavedGame();
+       // savedGame = getSavedGame();
    
     // display the game menu for the loaded game
         GameMenuView gmv = new GameMenuView();

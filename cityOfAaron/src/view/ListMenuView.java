@@ -9,6 +9,7 @@ import model.*;
 import control.*;
 import java.util.Scanner;
 import cityofaaron.CityOfAaron;
+import java.util.ArrayList;
 
 /**
  *
@@ -65,11 +66,13 @@ public class ListMenuView extends MenuView {
                 backToGameMenu();
                }
         }
- 
+
+    //Kate Lewis
     public void listAnimals()
     {
      GameControl gameControl = new GameControl();
-       GameControl.displayAnimals();
+       GameControl.printAinmalsList();
+               
     }
  
     public void listTools()

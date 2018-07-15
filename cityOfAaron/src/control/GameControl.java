@@ -143,7 +143,25 @@ public static void displayAnimals() {
                            "\n\tQuantity: " + listItem.getNumber());
     });
      }
-   
+
+    // 7/14/18 print animals list
+    // Kate Lewis
+    public static void printAinmalsList(ArrayList<ListItem> animals, String outputLocation){
+        try(PrintWriter out = new PrintWriter(outputLocation))
+            {
+                out.println("\n\n        Animals List         ");
+                out.printf("%n%-20s%10s%10s", "Description", "Quantity");
+                out.printf("%n%-20s%10s%10s", "-----------", "---------");
+            
+            for (ListItem listItem : animals) {
+                out.printf("%n%-20s%7d%13.2f", listItem.getName()
+                                             , listItem.getNumber());
+            }
+        } catch (Exception ex) {
+            System.out.println("Error printing animals list.");
+            }
+    }
+
 // create the Locations and the Map object     
 /**
 * The createMap method
@@ -377,72 +395,43 @@ public static void displayMap(){
     }
     
     
-    //7/13/2018 tools list individual assignment
-    //@author Kyli Barnes
+    7/13/2018 tools list individual assignment
+    @author Kyli Barnes
     
     public void printToolsList(ArrayList<Tools>,InventoryItems, String theGame)
     {
         try (PrintWriter out = new PrintWriter(theGame))
         {
-        // get a reference to the ArrayList you want to output
+         get a reference to the ArrayList you want to output
     
-        // output a heading for the report
+         output a heading for the report
         out.println("\n\n        Tools List         ");
         out.printf("%n%-20s%10s%10s", "Description", "Quantity", "Price");
-        // use a for loop to get the data from the ArrayList
+         use a for loop to get the data from the ArrayList
         for (Item item: toolsList) {
-        // and output it
+         and output it
         out.printf("%n%-20s%7d%13.2f", item.getDescription()
                                  , item.getQuantity()
                                  , item.getPrice());
         }
         } catch(Exception e) {
-        // output error message
+         output error message
         System.out.println("I/O Error: " + ex.getMessage());
 
         }
         finally
         {
-        // if(output != null) close the file
+         if(output != null) close the file
         if (output != null) {
         try {
             outFile.close();
         }    
         catch(Exception e) {
             System.out.println("Error closing file");
+       }
         }
         }
-        }
-    } 
+   } 
     
     
-    // 7/14/18 print animals list
-    // Kate Lewis
-    public void printAinmalsList(ArrayList<ListItem> animals, String theGame){
-        try 
-            {
-                // create the PrintWriter object
-                PrintWriter out = new PrintWriter(theGame);
-                // get a reference to the ArrayList you want to output
-                ArrayList<ListItem> animalList = new ArrayList<ListItem>;
-               
-               // use a for loop to get the data from the ArrayList
-                // and output it
-                for(animalList : ArrayList<ListItem> ){
-                    
-                }
-            }
-        catch(Exception e)
-            {
-                // output error message
-                System.out.println("There was an error with your list. /n");
-            }
-        finally
-            {
-                // if(output != null) close the file
-                
-            } 
-    }
-}
-
- 
+    
