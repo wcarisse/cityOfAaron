@@ -354,6 +354,29 @@ public static void displayMap(){
         }
     }
     
+ /**
+  * the printProvisionsList method
+  * Purpose: output a report to a disk
+  * Parameters: 
+  * Returns: the list of provisions
+  * @author: Carissa Cunningham - individual assignment 7/14/18
+  */
+    public void printProvisionsList(ArrayList<ListItem> provisions, String outputLocation) {
+        try (PrintWriter out = new PrintWriter(outputLocation)) {
+            out.println("\n\n        Provisions List         ");
+            out.printf("%n%-20s%10s%10s", "Description", "Quantity");
+            out.printf("%n%-20s%10s%10s", "-----------", "---------");
+            
+            for (ListItem listItem : provisions) {
+                out.printf("%n%-20s%7d%13.2f", listItem.getName()
+                                             , listItem.getNumber());
+            }
+        } catch (Exception ex) {
+            System.out.println("I/O Error");
+        }
+    }
+    
+    
     //7/13/2018 tools list individual assignment
     //@author Kyli Barnes
     

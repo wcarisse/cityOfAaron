@@ -80,6 +80,7 @@ public class ListMenuView extends MenuView {
  
     public void listProvisions()
     {
+       
        GameControl gameControl = new GameControl();
        gameControl.displayProvisions();
     }

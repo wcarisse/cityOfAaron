@@ -136,7 +136,7 @@ public void startSavedGame()
 {
     
     // get rid of \n character left in the stream
-       input.nextLine();
+       keyboard.nextLine();
     // prompt user and get a file path
        String file;
        System.out.println("Would you like to save your game?");
