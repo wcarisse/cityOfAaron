@@ -8,11 +8,13 @@ package control;
 import java.util.ArrayList;
 import cityofaaron.CityOfAaron;
 import model.*;
+import model.ListItem;
 import java.io.Serializable;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 
 public class GameControl implements Serializable
 {
@@ -355,7 +357,7 @@ public static void displayMap(){
     //7/13/2018 tools list individual assignment
     //@author Kyli Barnes
     
-    public void printToolsList(ArrayList<Tools>, InventoryItems, String theGame)
+    public void printToolsList(ArrayList<Tools>,InventoryItems, String theGame)
     {
         try (PrintWriter out = new PrintWriter(theGame))
         {
@@ -389,6 +391,35 @@ public static void displayMap(){
         }
         }
     } 
+    
+    
+    // 7/14/18 print animals list
+    // Kate Lewis
+    public void printAinmalsList(ArrayList<ListItem> animals, String theGame){
+        try 
+            {
+                // create the PrintWriter object
+                PrintWriter out = new PrintWriter(theGame);
+                // get a reference to the ArrayList you want to output
+                ArrayList<ListItem> animalList = new ArrayList<ListItem>;
+               
+               // use a for loop to get the data from the ArrayList
+                // and output it
+                for(animalList : ArrayList<ListItem> ){
+                    
+                }
+            }
+        catch(Exception e)
+            {
+                // output error message
+                System.out.println("There was an error with your list. /n");
+            }
+        finally
+            {
+                // if(output != null) close the file
+                
+            } 
+    }
+}
 
  
-}
