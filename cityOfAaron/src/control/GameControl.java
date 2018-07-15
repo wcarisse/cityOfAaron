@@ -395,43 +395,29 @@ public static void displayMap(){
     }
     
     
-    7/13/2018 tools list individual assignment
-    @author Kyli Barnes
+    //7/13/2018 tools list individual assignment
+    //@author Kyli Barnes
     
-    public void printToolsList(ArrayList<Tools>,InventoryItems, String theGame)
+    public void printToolsList(ArrayList<ListItem> tools, String outputLocation)
     {
-        try (PrintWriter out = new PrintWriter(theGame))
+        try (PrintWriter out = new PrintWriter(outputLocation))
         {
-         get a reference to the ArrayList you want to output
-    
-         output a heading for the report
+   
         out.println("\n\n        Tools List         ");
         out.printf("%n%-20s%10s%10s", "Description", "Quantity", "Price");
-         use a for loop to get the data from the ArrayList
-        for (Item item: toolsList) {
-         and output it
-        out.printf("%n%-20s%7d%13.2f", item.getDescription()
-                                 , item.getQuantity()
-                                 , item.getPrice());
+        out.printf("%n%-20s%10s%10s", "-----------", "---------");
+        
+        for (ListItem listItem: tools) {
+        out.printf("%n%-20s%7d%13.2f", listItem.getName()
+                                 , listItem.getNumber());
+                                
         }
         } catch(Exception e) {
-         output error message
-        System.out.println("I/O Error: " + ex.getMessage());
+        System.out.println("I/O Error: ");
 
         }
-        finally
-        {
-         if(output != null) close the file
-        if (output != null) {
-        try {
-            outFile.close();
-        }    
-        catch(Exception e) {
-            System.out.println("Error closing file");
-       }
-        }
-        }
-   } 
+   }
+}
     
     
     
