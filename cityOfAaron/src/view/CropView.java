@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package view;
 
 import exceptions.CropException;
@@ -10,7 +11,6 @@ import model.*;
 import control.*;
 import java.util.Scanner;
 import cityofaaron.CityOfAaron;
-import static java.lang.Double.max;
 
 /**
  *
@@ -22,6 +22,9 @@ public class CropView {
     // Get references to the Game object and the CropData object
     private static Game theGame = CityOfAaron.getTheGame();
     private static CropData cropData = theGame.getCrop();
+    private String theMenu;
+    private static String cropReportMenu;
+    private int max;
     
     /**
     * The runCropsView method()
@@ -29,14 +32,82 @@ public class CropView {
     * Parameters: none
     * Returns: none
     */
-    public static void runCropsView()
+    public CropView()
     {
-        // call the buyLandView( ) method
-           buyLandView( );
-        // add calls to the other crop view methods
-        // as they are written
+       theMenu = "\n" +
+        "**********************************\n" +
+        "* CITY OF AARON: CROP CONTROL MENU *\n" +
+        "**********************************\n" +
+        " 1 - Display the Crops Report\n" +
+        " 2 - Pay Offerings\n" +
+        " 3 - Buy New Land\n" +
+        " 4 - Plant Crops\n" +
+        " 5 - Feed the People\n" +
+        " 6 - Return to the Main Menu\n";
+        max = 6;    
     }
     
+     /**
+    *The doAction method
+    * Purpose: performs the selected action
+    * Parameters: none
+    * Returns: none
+    * @param option
+    */
+    // ===================================
+    public void doAction(int option)
+    {
+        switch (option)
+        {
+            case 1: //call the display crops report method
+            displayCropsReportView();
+            break;
+            case 2: // pay offerings
+            payOfferingsView();
+            break;
+            case 3: // buy land method
+            buyLandView( );
+            break;
+            case 4: //plant crops method
+            plantCropsView();
+            break;
+            case 5: //feed the people
+            feedPeopleView();
+            case 6: //goes back to main menu
+            displayMainMenuView();
+        }
+    } 
+    
+     public void displayMenuView()    
+     { int menuOption; 
+     do {      
+        // Display the menu      
+        System.out.println(theMenu); 
+        // Prompt the user and get the user’s input      
+        menuOption = getMenuOption(); 
+        // Perform the desired action      
+        doAction(menuOption); 
+        // Determine and display the next view        
+        } while (menuOption != max);     
+     } 
+     
+     public int getMenuOption() 
+     {        
+        // declare a variable to hold user’s input         
+        int userInput;         
+        do         
+        {             
+        // get user input from the keyboard             
+            userInput = keyboard.nextInt(); 
+ 
+            if (userInput < 1 || userInput > max)            
+            {                 
+                System.out.println("Option must be between 1 and "  + max);            
+            } 
+        } while (userInput < 1 || userInput > max); 
+         return userInput; 
+     } 
+     
     
     /**
     * The buyLandView method
@@ -128,20 +199,27 @@ public class CropView {
     }
    
     
- public void displayCropsReportView()
+ public static void displayCropsReportView()
  {
         int cropsReportOption = 0;
         int max = 0;
         do
         {
             // Display the menu
-            System.out.println(cropsReportOption);
+        cropReportMenu = "\n" +
+        "**********************************\n" +
+        "* CITY OF AARON: CROP REPORT MENU *\n" +
+        "**********************************\n" +
+        " 1 - Display the year\n" +
+        " 2 - Display Wheat in Storage\n" +
+        " 3 - Display Acres Owned\n";
+        max = 3;  
     
             // Prompt the user and get the user’s input
             cropsReportOption = getcropsReportOption();
 
             // Perform the desired action
-            doAction(cropsReportOption);
+            doAnotherAction(cropsReportOption);
 
             // Determine and display the next view
         } while (cropsReportOption != max);  
@@ -154,7 +232,7 @@ public class CropView {
  * @return 
  */
  // ===================================
- public int cropsReportOption()
+ public static int cropsReportOption()
  {
     // declare a variable to hold user’s input
      int userInput;
@@ -184,26 +262,33 @@ public class CropView {
  * @param option
  */
  // ===================================
- public void doAction(int option)
+ public static void doAnotherAction(int option)
    { 
          switch (option)
         {
             case 1: // display wheat in store
             //Get the number of wheat in storage and acred owned
             int wheatInStore = cropData.getWheatInStore();
-            System.out.println("You have this much wheat in the sotre" + wheatInStore);
+            System.out.println("You have this much wheat in the store" + wheatInStore);
             break;
             case 2: // display acres owned
             int acresOwned = cropData.getAcresOwned();
             System.out.println("You own this many acres" + acresOwned);
             break;
             case 3:
-            System.out.println("Return to main menu");
+            displayMainMenuView();
         }
     }
-public int getcropsReportOption() {
+ 
+ public static void displayMainMenuView() {
+     
+ }
+ 
+public static int getcropsReportOption() {
       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
     public static void feedPeopleView() {
         // Get number of bushels from user
         System.out.print("How many bushels would you like? ");

@@ -6,24 +6,17 @@
 package view;
 
 /**
- * Date Last Modified: 06/22/2018
+ * Date Last Modified: 07/18/2018
  * @author Carissa Cunningham
  */
 
 import java.util.Scanner;
 import cityofaaron.CityOfAaron;
 import control.GameControl;
-import model.Player;
 import model.Game;
-import model.CropData;
-import model.Map;
-import view.ListMenuView;
-
 
 public class GameMenuView extends MenuView {
     Scanner keyboard = new Scanner(System.in);
-    private String gameMenu;
-    private int max;
     private Game theGame = CityOfAaron.getTheGame();
     
     /**
@@ -111,7 +104,7 @@ public class GameMenuView extends MenuView {
     {
         //System.out.println("Lots of stuff goes here");
         CropView cv = new CropView();
-        cv.runCropsView();
+        cv.displayMenuView();
     }
     
     public void displayMainMenuView()
