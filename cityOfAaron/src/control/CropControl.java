@@ -134,10 +134,6 @@ public class CropControl {
             
 	}
 
-    public static void plantCrops(int toPlant, int wheatInStore, int acresOwned, CropData cropData) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
     //@author Carissa Cunningham
     //date modified: 6/12/18
     /*

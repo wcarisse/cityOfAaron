@@ -317,13 +317,27 @@ public static void displayMap(){
     Map theMap = theGame.getMap();
     int rowCount = theMap.getRowCount();
     int colCount = theMap.getColCount();
+    
+    System.out.println("\n\n  ***    AREA MAP    ***   ");
       
     for (int i = 0; i < rowCount; i++){
         System.out.print("\n");
         for (int j = 0; j < colCount; j++){
             System.out.print(theMap.getLocation(i,j).getSymbol()+ " ");
         }
-    }   
+    }  
+    
+    System.out.println("\n\nKey: \n" +
+                        "xxx - The Lamanite Border\n" +
+                        "^^^ - Forrest\n" +
+                        "~~~ - River\n" +
+                        ",,, - Undeveloped Land\n" +
+                        "ooo - Lake Bob\n" +
+                        "(*) - Main Village\n" +
+                        "@@@ - Desert\n" +
+                        "<^> - Ruler's Court\n" +
+                        "$$$ - Storehouse\n" +
+                        "!!1, !!2, !!3 - Farmlands");
 }
 
 /** 

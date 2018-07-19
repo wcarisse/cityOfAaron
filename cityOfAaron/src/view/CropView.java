@@ -60,21 +60,22 @@ public class CropView {
         switch (option)
         {
             case 1: //call the display crops report method
-            displayCropsReportView();
-            break;
+                displayReportView();
+                break;
             case 2: // pay offerings
-            payOfferingsView();
-            break;
+                payOfferingsView();
+                break;
             case 3: // buy land method
-            buyLandView( );
-            break;
+                buyLandView( );
+                break;
             case 4: //plant crops method
-            plantCropsView();
-            break;
+                plantCropsView();
+                break;
             case 5: //feed the people
-            feedPeopleView();
+                feedPeopleView();
+                break;
             case 6: //goes back to main menu
-            displayMainMenuView();
+                displayMainMenuView();
         }
     } 
     
@@ -199,59 +200,17 @@ public class CropView {
     }
    
     
- public static void displayCropsReportView()
+ public void cropsReportView()
  {
-        int cropsReportOption = 0;
-        int max = 0;
-        do
-        {
-            // Display the menu
         cropReportMenu = "\n" +
         "**********************************\n" +
         "* CITY OF AARON: CROP REPORT MENU *\n" +
         "**********************************\n" +
         " 1 - Display the year\n" +
         " 2 - Display Wheat in Storage\n" +
-        " 3 - Display Acres Owned\n";
-        max = 3;  
-    
-            // Prompt the user and get the user’s input
-            cropsReportOption = getcropsReportOption();
-
-            // Perform the desired action
-            doAnotherAction(cropsReportOption);
-
-            // Determine and display the next view
-        } while (cropsReportOption != max);  
- }
- /**
- * The getMenuOption method
- * Purpose: gets the user's input
- * Parameters: none
- * Returns: integer - the option selected
- * @return 
- */
- // ===================================
- public static int cropsReportOption()
- {
-    // declare a variable to hold user’s input
-     int userInput;
-     int max = 0;
-    // begin loop
-    do{
-        // get user input from the keyboard
-        userInput = keyboard.nextInt();
-
-        // if it is not a valid value, output an error message
-        if (userInput < 1 || userInput > max)
-            {
-                System.out.println("Option must be between 1 and " + max);
-            }
-        // loop back to the top if input was not valid
-    } while(userInput < 1 || userInput > max);
-    
-    // return the value input by the user
-    return userInput;
+        " 3 - Display Acres Owned\n" +
+        " 4 - Return to Previous Menu";
+        max = 4;  
  }
  
  /**
@@ -266,27 +225,40 @@ public class CropView {
    { 
          switch (option)
         {
-            case 1: // display wheat in store
-            //Get the number of wheat in storage and acred owned
-            int wheatInStore = cropData.getWheatInStore();
-            System.out.println("You have this much wheat in the store" + wheatInStore);
-            break;
-            case 2: // display acres owned
-            int acresOwned = cropData.getAcresOwned();
-            System.out.println("You own this many acres" + acresOwned);
-            break;
-            case 3:
-            displayMainMenuView();
+            case 1: // display current year
+                int year = cropData.getYear();
+                System.out.println("Year: " + year);
+                break;
+            case 2: // display wheat in store
+                int wheatInStore = cropData.getWheatInStore();
+                System.out.println("You have this much wheat in the store" + wheatInStore);
+                break;
+            case 3: // display acres owned
+                int acresOwned = cropData.getAcresOwned();
+                System.out.println("You own this many acres" + acresOwned);
+                break;
+            case 4:
+                displayMainMenuView();
         }
     }
+ 
+ public void displayReportView()    
+     { int menuOption; 
+     do {      
+        // Display the menu      
+        System.out.println(cropReportMenu); 
+        // Prompt the user and get the user’s input      
+        menuOption = getMenuOption(); 
+        // Perform the desired action      
+        doAnotherAction(menuOption); 
+        // Determine and display the next view        
+        } while (menuOption != max);     
+     } 
+ 
  
  public static void displayMainMenuView() {
      
  }
- 
-public static int getcropsReportOption() {
-      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 
     public static void feedPeopleView() {
