@@ -40,21 +40,25 @@ public class CropControl {
         
         //If acresToBuy is > wheatInStore / landPrice, return -1
         int wheatInStore = cropData.getWheatInStore();
-        if (acresToBuy > wheatInStore / landPrice)
+        if (wheatInStore < acresToBuy * landPrice)
             throw new CropException("There is insufficient wheat to buy this much land.");
         
+        // acresOwned += acresToBuy
+        int acresOwned = cropData.getAcresOwned();
+        acresOwned += acresToBuy;
+        cropData.setAcresOwned(acresOwned);
+        
         // wheatInStore –= (acresToBuy * landPrice)
+        wheatInStore = cropData.getWheatInStore();
         wheatInStore -= (acresToBuy * landPrice);
         cropData.setWheatInStore(wheatInStore);
         
         //population = acresToBuy / 10
         int population = cropData.getPopulation();
         if (population < acresToBuy / 10)
-            throw new CropException("Not enough people are available to plant! Please try again");
+           throw new CropException("Not enough people are available to plant! Please try again");
         
-        // acresOwned += acresToBuy
-        int acresOwned = cropData.getAcresOwned();
-        acresOwned += acresToBuy;
+        
     }
     
     /*
@@ -106,9 +110,8 @@ public class CropControl {
             //Wheat = wheatInStore – numberOfBushels
             wheatInStore -= numberOfBushels;
             cropData.setWheatInStore(wheatInStore);
-            
-
-}
+        }
+        
         /*
 	*The setOffering method
 	*Purpose: to pay tithes and offerings
