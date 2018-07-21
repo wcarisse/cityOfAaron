@@ -317,8 +317,13 @@ public static void displayMap(){
     Map theMap = theGame.getMap();
     int rowCount = theMap.getRowCount();
     int colCount = theMap.getColCount();
-    
-    System.out.println("\n\n  ***    AREA MAP    ***   ");
+    //kyli
+    System.out.println("\n\n  ***    AREA MAP    ***   " +
+                       "| xxx | xxx | ~~~ | ~~~ | ,,, |" +
+                       "| ,,, | ooo | (*) | ^^^ | ^^^ |" +
+                       "| !!1 | !!2 | !!3 | $$$ | ~~~ |" +
+                       "| @@@ | @@@ | <^> | @@@ | @@@ |" +
+                       "| ,,, | ~~~ | ,,, | xxx | xxx |" );
       
     for (int i = 0; i < rowCount; i++){
         System.out.print("\n");
@@ -332,7 +337,7 @@ public static void displayMap(){
                         "^^^ - Forrest\n" +
                         "~~~ - River\n" +
                         ",,, - Undeveloped Land\n" +
-                        "ooo - Lake Bob\n" +
+                        "ooo - Lake Celestial\n" +
                         "(*) - Main Village\n" +
                         "@@@ - Desert\n" +
                         "<^> - Ruler's Court\n" +
