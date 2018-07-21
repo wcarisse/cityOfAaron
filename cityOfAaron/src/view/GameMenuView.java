@@ -88,6 +88,7 @@ public class GameMenuView extends MenuView {
        GameControl gameControl = new GameControl();
        gameControl.displayMap();
     }
+    
 
     public void displayListMenuView()
     {
